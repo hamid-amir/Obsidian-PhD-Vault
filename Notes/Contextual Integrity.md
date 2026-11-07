@@ -24,5 +24,3 @@ Contextual integrity describes each information flow using a few parameters:
 - **Transmission principle:** the conditions of sharing (in confidence, with consent, as required by law)
 
 Change any one of these and a flow can go from appropriate to inappropriate.
-
-just test if everything works, now againnnnn!!!!
