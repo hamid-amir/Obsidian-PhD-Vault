@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: View
+    filters:
+      and:
+        - file.folder == "Sources"
+    order:
+      - file.name
+      - Venue
+      - Year
+      - Author
+      - Title
