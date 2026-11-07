@@ -26,3 +26,4 @@ Contextual integrity describes each information flow using a few parameters:
 Change any one of these and a flow can go from appropriate to inappropriate.
 
 hello from linux
+this is mac
