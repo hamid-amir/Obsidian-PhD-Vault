@@ -16,6 +16,8 @@
 
 ----
 
+[[Goel 2026-09|AGENTCIBENCH:]]
+
 - The gap: need to measure context-appropriate disclosure of agents. This is different from their performance (utility)
 
 - AGENTCIBENCH fills this gap by measuring the final disclosure decision of CUAs under contextual-integrity constraints.
