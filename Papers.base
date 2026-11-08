@@ -10,3 +10,5 @@ views:
       - Year
       - Author
       - Title
+    columnSize:
+      note.Author: 143
