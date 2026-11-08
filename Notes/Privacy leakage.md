@@ -1,6 +1,6 @@
 
 > [!Note]
-> [[Goel 2026-09|Agents already leak out of the box]], and [[Goel 2026-04|fine-tuning can make it worse]], while standard benchmarks show neither.
+> [[Goel 2026-09 Capable but Careless|Agents already leak out of the box]], and [[Goel 2026-04 Privacy Collapse|fine-tuning can make it worse]], while standard benchmarks show neither.
 
 >[!caution]
 >contextual privacy should be a routine check before deploying any agent, and re-run after every model change.
@@ -16,7 +16,7 @@
 
 ----
 
-[[Goel 2026-09|AGENTCIBENCH:]]
+[[Goel 2026-09 Capable but Careless|AGENTCIBENCH:]]
 
 - The gap: need to measure context-appropriate disclosure of agents. This is different from their performance (utility)
 

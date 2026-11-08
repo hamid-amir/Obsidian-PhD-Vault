@@ -1,6 +1,6 @@
  
  >[!Definition]
- > CI is a theory of privacy developed by philosopher **[[Nissenbaum 2004|Nissenbaum 2004]]**. Its central idea is that **privacy isn’t about keeping information secret. It’s about information flowing appropriately for the context it came from.**
+ > CI is a theory of privacy developed by philosopher **[[Nissenbaum 2004 contextual integrity|Nissenbaum 2004]]**. Its central idea is that **privacy isn’t about keeping information secret. It’s about information flowing appropriately for the context it came from.**
 
  
 ### The core idea
