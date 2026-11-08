@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Nissenbaum 2004.md",
+                "file": "Notes/AgentCIBench.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Nissenbaum 2004"
+              "title": "AgentCIBench"
             }
           }
         ]
@@ -190,10 +190,11 @@
   "active": "7525620aeeb355d2",
   "lastOpenFiles": [
     "Notes/AgentCIBench.md",
-    "Notes/Contextual Integrity.md",
+    "Sources/Goel 2026-04.md",
     "Sources/Goel 2026-09.md",
-    "Papers.base",
+    "Notes/Contextual Integrity.md",
     "Sources/Nissenbaum 2004.md",
+    "Papers.base",
     "Washington Law Review.md",
     "EMNLP.md",
     "Arguments",
