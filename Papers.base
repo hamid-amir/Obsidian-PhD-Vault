@@ -1,14 +1,13 @@
 views:
   - type: table
-    name: View
+    name: Papers
     filters:
       and:
-        - file.folder == "Sources"
+        - file.folder == "wiki/sources"
     order:
       - file.name
-      - Venue
-      - Year
-      - Author
-      - Title
-    columnSize:
-      note.Author: 143
+      - title
+      - authors
+      - venue
+      - year
+      - status

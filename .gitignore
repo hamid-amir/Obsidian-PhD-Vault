@@ -1,4 +1,4 @@
-# Obsidian workspace state
+# Obsidian workspace state (machine-local)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
@@ -8,3 +8,6 @@ Thumbs.db
 
 # Obsidian trash
 .trash/
+
+# LLM-wiki regenerable caches
+wiki/.wiki-cache/
