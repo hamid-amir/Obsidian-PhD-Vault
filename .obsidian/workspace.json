@@ -11,10 +11,14 @@
             "id": "7525620aeeb355d2",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Privacy leakage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Privacy leakage"
             }
           }
         ]
@@ -163,8 +167,19 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "14798ec7a292f76a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -173,28 +188,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7525620aeeb355d2",
+  "active": "1ae30ea009e4fdd3",
   "lastOpenFiles": [
-    "Sources/Nissenbaum 2004 contextual integrity.md",
-    "Sources/Goel 2026-09 Capable but Careless.md",
-    "Sources/Goel 2026-04 Privacy Collapse.md",
+    "Untitled.canvas",
     "Notes/Privacy leakage.md",
     "Notes/Contextual Integrity.md",
+    "Sources/Nissenbaum 2004.md",
     "Papers.base",
-    "Washington Law Review.md",
-    "EMNLP.md",
     "Arguments",
     "__Support",
+    "Washington Law Review.md",
     "Untitled.md",
     "Sources",
     "Notes",
