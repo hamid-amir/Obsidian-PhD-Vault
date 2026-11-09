@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privacy leakage.md",
+                "file": "Arguments/questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Privacy leakage"
+              "title": "questions"
             }
           }
         ]
@@ -198,11 +198,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1ae30ea009e4fdd3",
+  "active": "7525620aeeb355d2",
   "lastOpenFiles": [
-    "Argume",
-    "Untitled.canvas",
     "Notes/Privacy leakage.md",
+    "Arguments/questions.md",
+    "Arguments",
+    "Untitled.canvas",
+    "Argume",
     "Notes/Contextual Integrity.md",
     "Sources/Nissenbaum 2004.md",
     "Papers.base",
