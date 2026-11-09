@@ -1,8 +1,14 @@
 ---
 type: source
 title: "Capable but Careless: Do Computer-Use Agents Follow Contextual Integrity?"
-tags: [agents, benchmark, defenses, contextual-integrity]
-authors: [Anmol Goel, Iryna Gurevych]
+tags:
+  - agents
+  - benchmark
+  - defenses
+  - contextual-integrity
+authors:
+  - Anmol Goel
+  - Iryna Gurevych
 venue: EMNLP
 year: 2026
 status: ingested
