@@ -17,6 +17,10 @@ updated: 2026-11-09
 
 As the title states, the paper argues that benign fine-tuning can break contextual privacy in language models.
 
+## Cited by
+
+- [[goel-2026-capable-but-careless]] cites this paper (ACL 2026; author list there: Goel, Emde, Yun, Oh, Gubri) for the claim that benign fine-tuning can erode contextual-privacy behavior, and uses it to argue that CI testing must be re-run after later training stages. Full author names not yet verified for this page.
+
 ## Where this fits
 
 - [[privacy-leakage-in-agents]]
