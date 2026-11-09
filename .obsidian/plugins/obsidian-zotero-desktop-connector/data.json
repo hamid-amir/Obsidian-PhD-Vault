@@ -7,9 +7,9 @@
   "citeFormats": [],
   "exportFormats": [
     {
-      "name": "Import #1",
-      "outputPathTemplate": "{{citekey}}.md",
-      "imageOutputPathTemplate": "{{citekey}}/",
+      "name": "Annotations",
+      "outputPathTemplate": "raw/zotero/{{citekey}}.md",
+      "imageOutputPathTemplate": "raw/assets/zotero/{{citekey}}/",
       "imageBaseNameTemplate": "image"
     }
   ],
