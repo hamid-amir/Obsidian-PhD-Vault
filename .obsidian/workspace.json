@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Memory privacy leakage.md",
+                "file": "Notes/Privacy leakage - LLMs Memory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Memory privacy leakage"
+              "title": "Privacy leakage - LLMs Memory"
             }
           }
         ]
@@ -198,15 +198,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7525620aeeb355d2",
+  "active": "1ae30ea009e4fdd3",
   "lastOpenFiles": [
-    "Notes/Privacy leakage.md",
-    "Notes/Memory privacy leakage.md",
+    "Notes/Privacy leakage - Agents.md",
+    "Notes/Privacy leakage - LLMs Memory.md",
+    "Notes/Contextual Integrity.md",
     "Arguments/questions.md",
     "Arguments",
     "Untitled.canvas",
     "Argume",
-    "Notes/Contextual Integrity.md",
     "Sources/Nissenbaum 2004.md",
     "Papers.base",
     "Arguments",
