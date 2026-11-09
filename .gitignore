@@ -11,3 +11,6 @@ Thumbs.db
 
 # LLM-wiki regenerable caches
 wiki/.wiki-cache/
+
+# Zotero Integration's PDF helper is platform-specific (Linux vs Mac binary); each machine downloads its own
+.obsidian/plugins/obsidian-zotero-desktop-connector/pdfannots2json*

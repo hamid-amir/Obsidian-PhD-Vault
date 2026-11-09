@@ -11,6 +11,8 @@ CLAUDE.md          this file
 Papers.base        Obsidian Bases table over wiki/sources/
 my-notes/          HAMID'S OWN WRITING. Read for context, link to it, never edit/move/rewrite.
 raw/               immutable non-Zotero sources (clippings, transcripts); raw/assets/ for images
+  zotero/          Hamid's Zotero highlights + comments per paper (auto-generated, never edit)
+templates/         Obsidian templates (Zotero import template)
 wiki/              CLAUDE-OWNED wiki
   SCHEMA.md        conventions: page types, frontmatter, tags, naming. AUTHORITATIVE.
   index.md         catalog, one line per page. Read this first.

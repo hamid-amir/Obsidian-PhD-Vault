@@ -11,6 +11,7 @@ Paths are relative to the vault root (the Obsidian vault is the project root).
 - Wiki root: `wiki/`
 - Raw sources: **Zotero is the primary raw store for papers.** PDFs stay in Zotero and are never copied into the vault (keeps git small). Source pages point to them through `zotero` / `url`.
 - `raw/` holds only material Zotero can't: web clippings, transcripts, talk notes. Immutable once added.
+- `raw/zotero/<citekey>.md` holds Hamid's highlights and comments, imported from Zotero by the Zotero Integration plugin (template: `templates/zotero-annotations.md`). They are regenerated on re-import, so never edit them. Read them during ingest: they show what Hamid found important, and his comments (marked **Hamid:**) are his own views, not the paper's claims. Images from annotations go in `raw/assets/zotero/`.
 - Asset/image storage: `raw/assets/`
 - Human layer: `my-notes/` is written by Hamid only. Read it for context and link to it, but never edit, move or rewrite it.
 
@@ -121,7 +122,7 @@ Generation is reproducible from markdown via `scripts/wiki_graph_extract.py`. Th
 
 ## Workflow customizations
 
-- Ingest from Zotero: find the PDF in Zotero (`~/Zotero/storage/` on Linux), read it in chunks, and record the citekey in `zotero`. Do not copy the PDF into the vault.
+- Ingest from Zotero: read the paper itself (arXiv URL or the PDF in Zotero, in chunks), plus Hamid's annotations in `raw/zotero/<citekey>.md` if present. Use the Better BibTeX citekey as the `zotero` field, and link the annotations file as `raw`. Do not copy the PDF into the vault.
 - Upgrading a `seed` page: re-read the full text, verify every claim and number already on the page, keep Hamid's takeaways (label them as his notes), then set `status: ingested` and `ingested: <date>`.
 - `Papers.base` (vault root) is an Obsidian Bases table over `wiki/sources/`. Keep source frontmatter keys consistent so it renders.
 
