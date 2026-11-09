@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arguments/questions.md",
+                "file": "Notes/Memory privacy leakage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "questions"
+              "title": "Memory privacy leakage"
             }
           }
         ]
@@ -201,6 +201,7 @@
   "active": "7525620aeeb355d2",
   "lastOpenFiles": [
     "Notes/Privacy leakage.md",
+    "Notes/Memory privacy leakage.md",
     "Arguments/questions.md",
     "Arguments",
     "Untitled.canvas",
