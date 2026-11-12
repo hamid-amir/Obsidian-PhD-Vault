@@ -15,7 +15,7 @@ status: ingested
 url: https://arxiv.org/abs/2606.23189
 ingested: 2026-11-09
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-12
 ---
 
 # Capable but Careless (AgentCIBench)
@@ -134,4 +134,4 @@ The paper's policy appendix argues that CI testing should be a pre-deployment ch
 - [[privacy-leakage-in-agents]]
 - [[prompt-defenses-for-contextual-privacy]]
 - [[contextual-integrity]]
-- Cites CIMemories (Mireshghallah et al., 2025) as a persistent-memory CI benchmark but scopes memory out: see [[privacy-leakage-in-llm-memory]].
+- Cites [[mireshghallah-2025-cimemories|CIMemories]] (Mireshghallah et al., 2025) as a persistent-memory CI benchmark but scopes memory out: see [[privacy-leakage-in-llm-memory]].

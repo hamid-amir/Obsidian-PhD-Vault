@@ -36,4 +36,4 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 ## Open questions
 
 - Does an agent that picks its own tools and context behave like the "helpful" fine-tuned models in [[goel-2026-privacy-collapse]]? Hamid's question 2 in `my-notes/questions.md`; see [[privacy-collapse#Open questions]].
-- Why do prompting defenses help here but reportedly not for memory leakage? See `my-notes/questions.md`, [[prompt-defenses-for-contextual-privacy]] and [[privacy-leakage-in-llm-memory]].
+- Why do prompting defenses help here while [[mireshghallah-2025-cimemories|CIMemories]] reports a trade-off for memory? See [[prompt-defenses-for-contextual-privacy#Free lunch or trade-off]].

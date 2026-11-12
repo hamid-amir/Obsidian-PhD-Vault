@@ -5,7 +5,7 @@ title: "AgentCIBench"
 tags: [benchmark, agents, contextual-integrity]
 sources: [goel-2026-capable-but-careless]
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-12
 ---
 
 # AgentCIBench
@@ -30,5 +30,5 @@ An evaluation harness for whether computer-use agents make context-appropriate d
 ## Caveats
 
 - The source paper calls the pool an adversarial stress test: read rates as relative orderings.
-- Memory and multi-turn personalization are out of scope (contrast [[privacy-leakage-in-llm-memory]]).
+- Memory and multi-turn personalization are out of scope (contrast [[cimemories]] and [[privacy-leakage-in-llm-memory]]).
 - The paper has several internal numeric inconsistencies; see the caution callout on [[goel-2026-capable-but-careless]].

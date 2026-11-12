@@ -34,7 +34,7 @@ Only one source covers this so far, so everything below is that paper's evidence
 ## Open questions
 
 - Is ungated collapse a separable "mode", or diffuse damage? The backdoor experiment in [[goel-2026-privacy-collapse]] §4.5 shows the behaviour can be gated, which does not by itself settle this.
-- Do prompt defenses ([[prompt-defenses-for-contextual-privacy]]) recover privacy in a collapsed model? Not tested in the source.
+- Do prompt defenses ([[prompt-defenses-for-contextual-privacy]]) recover privacy in a collapsed model? Not tested in the source. Hamid raises this as question 3 in `my-notes/questions.md`.
 - Hamid's question 2 in `my-notes/questions.md`: is an agent that chooses its own tools and context (MCP access) in something like the paper's "helpful" mode?
 
 ## Related

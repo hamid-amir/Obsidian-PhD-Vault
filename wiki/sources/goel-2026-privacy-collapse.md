@@ -30,7 +30,7 @@ Defines **[[privacy-collapse]]**: benign fine-tuning degrades a model's [[contex
 
 - **Definition:** the average leakage probability of the fine-tuned model exceeds the base model's by some τ > 0, while aggregate capability and safety performance stays within a small ε of the base model.
 - **Threat model:** no poisoning and no explicit privacy violations in the training data.
-- **Two settings:** agentic (PrivacyLens, 493 scenarios, metric "Privacy Awareness (%)") and memory (CIMemories, 100 sampled scenarios, rate of including attributes labelled inappropriate, judged by gpt-5-nano; judge check on 30 samples: 93.3% agreement, κ = 0.71).
+- **Two settings:** agentic (PrivacyLens, 493 scenarios, metric "Privacy Awareness (%)") and memory ([[cimemories|CIMemories]], 100 sampled scenarios, rate of including attributes labelled inappropriate, judged by gpt-5-nano; judge check on 30 samples: 93.3% agreement, κ = 0.71).
 - **Models:** gpt-4.1, gpt-4.1-mini, gpt-4o, gpt-4o-mini, gpt-3.5-turbo (one epoch, default hyperparameters, OpenAI fine-tuning API) and Llama-3-8B (LoRA, 10 epochs, TogetherAI). Results are reported as relative change Δrel against the base model, with error bars from three seeds.
 
 ## Helpful vs control fine-tuning (§4.1)
