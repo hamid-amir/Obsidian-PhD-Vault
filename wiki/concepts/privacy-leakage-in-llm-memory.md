@@ -2,9 +2,9 @@
 type: concept
 title: "Privacy leakage in LLM memory"
 tags: [llm-memory, contextual-integrity, stub]
-sources: [goel-2026-capable-but-careless]
+sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse]
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-12
 ---
 
 # Privacy leakage in LLM memory
@@ -13,7 +13,11 @@ updated: 2026-11-09
 > LLMs increasingly use persistent memory from past interactions to enhance personalization and task performance.
 > Can models incorporate information from their memories appropriately?
 
-This page is a stub. No source on this topic has been ingested yet.
+This page is a stub. No dedicated memory source has been ingested yet.
+
+## Evidence so far
+
+- [[goel-2026-privacy-collapse]] uses CIMemories (100 sampled scenarios) as its memory setting. Models fine-tuned on "helpful" data include more inappropriate memory attributes, with a smaller drop than in the agentic setting (15% on average, as stated). For GPT-4.1, 74.2% of the CI failures it categorises are session-boundary failures. See [[privacy-collapse]].
 
 ## Sources to ingest
 

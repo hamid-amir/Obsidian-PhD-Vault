@@ -4,7 +4,7 @@ title: "Privacy leakage in agents"
 tags: [agents, contextual-integrity, defenses]
 sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse]
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-12
 ---
 
 # Privacy leakage in agents
@@ -21,7 +21,7 @@ Leakage here is judged through [[contextual-integrity]]: the agent sees everythi
 
 - [[goel-2026-capable-but-careless]] ([[agentcibench|AgentCIBench]]): cooperative computer-use agents leak without any attacker. Across 15 agents, mean leakage is 67.9%, and utility and engagement-conditioned leakage are only weakly correlated (r = 0.49), so capability and disclosure safety are separate axes. Leakage was higher, not lower, when two agents acted end-to-end in the UI (small sample). Cheap prompt defenses reduced leakage and improved task success: see [[prompt-defenses-for-contextual-privacy]].
 - Measuring leakage needs care with refusals: an agent that refuses often looks private on raw leakage. AgentCIBench therefore conditions on engagement (`L_eng = L / (1 − R)`) ([[goel-2026-capable-but-careless]]).
-- [[goel-2026-privacy-collapse]]: benign fine-tuning can break contextual privacy. Not yet ingested from the full text.
+- [[goel-2026-privacy-collapse]] ([[privacy-collapse]]): benign fine-tuning can break contextual privacy. Fine-tuning on responses that use accessible context without asking cut PrivacyLens accuracy sharply (gpt-4o-mini 84.18 → 1.56), and empathetic or customer-support dialogue data cut it by roughly 17–24% relative, while safety and capability benchmarks barely moved. The effect can also be hidden behind a trigger string (§4.5).
 
 ## Failure modes
 
@@ -35,4 +35,5 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 
 ## Open questions
 
+- Does an agent that picks its own tools and context behave like the "helpful" fine-tuned models in [[goel-2026-privacy-collapse]]? Hamid's question 2 in `my-notes/questions.md`; see [[privacy-collapse#Open questions]].
 - Why do prompting defenses help here but reportedly not for memory leakage? See `my-notes/questions.md`, [[prompt-defenses-for-contextual-privacy]] and [[privacy-leakage-in-llm-memory]].

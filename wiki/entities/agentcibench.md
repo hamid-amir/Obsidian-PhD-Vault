@@ -12,6 +12,7 @@ updated: 2026-11-09
 
 An evaluation harness for whether computer-use agents make context-appropriate disclosure decisions, introduced in [[goel-2026-capable-but-careless]] (Goel & Gurevych, EMNLP 2026). Code at `github.com/UKPLab/emnlp2026-agentcibench`, data at `hf.co/datasets/UKPLab/AgentCIBench`.
 
+![[Pasted image 20261112130140.png]]
 ## At a glance
 
 - **Unit:** a scenario = app state + task prompt + recipient + must-share items + must-not-share items. The agent's one externally visible action is scored.

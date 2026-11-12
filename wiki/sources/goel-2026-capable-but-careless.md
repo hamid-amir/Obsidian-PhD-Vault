@@ -25,6 +25,7 @@ updated: 2026-11-09
 
 Introduces **[[agentcibench|AgentCIBench]]**, which measures whether computer-use agents (CUAs) make context-appropriate disclosure decisions under [[contextual-integrity]] constraints.
 
+![[Pasted image 20261109194033.png]]
 ## The gap and the contribution
 
 - The gap: we need to measure context-appropriate disclosure by agents. This is different from their performance (utility).
