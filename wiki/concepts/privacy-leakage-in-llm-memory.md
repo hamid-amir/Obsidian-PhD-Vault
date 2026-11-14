@@ -2,9 +2,9 @@
 type: concept
 title: "Privacy leakage in LLM memory"
 tags: [llm-memory, contextual-integrity]
-sources: [mireshghallah-2025-cimemories, goel-2026-capable-but-careless, goel-2026-privacy-collapse]
+sources: [mireshghallah-2025-cimemories, goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas]
 created: 2026-11-09
-updated: 2026-11-12
+updated: 2026-11-14
 ---
 
 # Privacy leakage in LLM memory
@@ -21,6 +21,7 @@ updated: 2026-11-12
   - Reasoning reduced violations in the one model family tested; model size saturated; minimisation-style prompts traded completeness for privacy (see [[prompt-defenses-for-contextual-privacy]]).
   - Caveats: labels are GPT-5 consensus without reported human validation, the metric is a worst case over tasks and samples, single turn, no tools.
 - [[goel-2026-privacy-collapse]] uses [[cimemories|CIMemories]] (100 sampled scenarios, different judge) as its memory setting. Models fine-tuned on "helpful" data include more inappropriate memory attributes, with a smaller drop than in the agentic setting (15% on average, as stated). For GPT-4.1, 74.2% of the CI failures it categorises are session-boundary failures. See [[privacy-collapse]].
+- [[gupta-2026-pisas]] ([[pisas|PiSAs]]): in a multi-user system, adding memory raises completeness by 14.2–24.9 points but moves violations into memory. Total visibility violations rise from 14.9–28.0% without memory to 35.6–50.0% with hybrid memory (one backbone, decentralized). The authors call this "a relocation", not a reduction. Memory in that study lasts a single run, so it is shared context within a task, not cross-session memory.
 
 ## Sources to ingest
 

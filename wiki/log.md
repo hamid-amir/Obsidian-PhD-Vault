@@ -26,3 +26,5 @@ Operations:
 ## [2026-11-12] ingest | CIMemories, arXiv 2511.14937 — seed upgraded to ingested from arXiv HTML text (figures, Appendix B and low prompt not read); new [[cimemories]]; updated privacy-leakage-in-llm-memory (stub tag removed), prompt-defenses-for-contextual-privacy (contradiction with AgentCIBench recorded, contested tag), privacy-leakage-in-agents, contextual-integrity, privacy-collapse, agentcibench, both Goel source pages (links only), index. No Zotero annotations found; zotero citekey not set. No typed graph edges added.
 
 ## [2026-11-12] ingest | PiSAs, arXiv 2607.05318 — seed page [[gupta-2026-pisas]] created with verified metadata only; index updated.
+
+## [2026-11-14] ingest | PiSAs, arXiv 2607.05318 — seed upgraded to ingested from the v2 PDF text (19 Oct 2026; Appendices H–P and figures not read). v1 numbers discarded. New [[pisas]]; updated privacy-leakage-in-agents (settings map, evidence), privacy-leakage-in-llm-memory, prompt-defenses-for-contextual-privacy, contextual-integrity, cimemories, index. No Zotero annotations found; zotero citekey not set. No typed graph edges added.

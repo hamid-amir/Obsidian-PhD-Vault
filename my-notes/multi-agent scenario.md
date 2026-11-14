@@ -13,7 +13,7 @@ I think its a more interesting field and also has more space to innovate. Consid
 | Paper | arXiv | Setting | Main finding |
 |---|---|---|---|
 | AgentLeak: A Benchmark for Internal-Channel Privacy Leakage in Multi-Agent LLM Systems (El Yagoubi, Badu-Marfo, Al Mallah; Feb 2026) | [2602.11510](https://arxiv.org/abs/2602.11510) | Coordinator and worker, seven leakage channels | Final output leaks less than a single agent (27.2% vs 43.2%), but inter-agent messages leak 68.8%. Output-side defenses leave internal leakage near 30%. |
-| PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems (Gupta et al.; Jul 2026) | [2607.05318](https://arxiv.org/abs/2607.05318) | 4–10 users sharing one system; single, centralized, decentralized topologies; CI labels | Multi-agent topologies cut violations but failure stays above 75%. Adding memory moves violations onto memory (63–90% visibility violations). |
+| PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems (Gupta et al.; Jul 2026) | [2607.05318](https://arxiv.org/abs/2607.05318) | A team of users sharing one system; single, centralized, decentralized topologies; CI labels; 265 scenarios (v2, 19 Oct 2026) | v2 numbers: mean appropriateness violations 36.8% (single), 26.4% (centralized), 19.0% (decentralized); failure rate 79.6–100%. Hybrid memory raises visibility violations from 14.9–28.0% to 35.6–50.0%. Output-filter mitigations cut single-agent violations to 6% at a completeness cost. |
 | Got a Secret? LLM Agents Can't Keep It: Evaluating Privacy in Multi-Agent Systems (Priyanshu, Vijay, Pahwa; May 2026, ACM CAIS '26) | [2605.27766](https://arxiv.org/abs/2605.27766) | 2,533 agents on a Reddit-like platform | Leakage rises from 19.95% single-turn to 45.30% multi-turn. Leaks are contagious: 12.8% after a leaking reply vs 1.6% after a clean one. |
 | Loose Lips: Understanding Privacy Leakage in Agentic Dialogue (Sharma et al.; Oct 2026) | [2610.14071](https://arxiv.org/abs/2610.14071) | Two-agent dialogue built on the CIMemories pipeline | Leakage grows up to 3× from 1 to 6 turns. A privacy-aware prompt cut it by about 60% with little completeness cost. |
 | Judging Before Propagation: Task-Graph Contextual Integrity for Multi-Agent Privacy (Wu, Delattre, Cao; Oct 2026) | [2610.39532](https://arxiv.org/abs/2610.39532) | Task graphs with a compromised agent (abstract only read) | Judging a flow against its whole downstream path cuts unauthorized disclosures by 85.8–94.1% vs a local CI check, keeping 93.6–96.1% of task accuracy. |
@@ -45,14 +45,14 @@ I think its a more interesting field and also has more space to innovate. Consid
 
 ### Gaps (Claude's reading, from these searches only)
 
-- Prompt defenses are contested here too: AgentLeak and PiSAs report limits or a completeness cost, Loose Lips reports about 60% less leakage at little cost. No paper read compares "share less" against recipient-aware prompts.
+- Prompt defenses are contested here too: AgentLeak reports limits and PiSAs v1 reported a completeness cost (v2 per-level numbers not read), Loose Lips reports about 60% less leakage at little cost. No paper read compares "share less" against recipient-aware prompts.
 - No paper read puts a fine-tuned agent in a multi-agent system.
 - CI labels stop at the first hop in most benchmarks; only the task-graph paper judges a flow against where it goes next.
 
 ### Candidate ideas (Claude's suggestions)
 
 1. **Collapse contagion:** put one privacy-collapsed or backdoored agent ([[goel-2026-privacy-collapse]] recipe) into a team of clean agents and measure whether leakage spreads, by topology and position.
-2. **Which prompt, on which surface:** share-less vs recipient-aware prompts, measured separately on final output, inter-agent messages and memory. Tests question 3 in [[questions]].
+2. **Which prompt, on which surface:** share-less vs recipient-aware prompts, measured separately on final output, inter-agent messages and memory. Tests the speculation under question 1 in [[questions]].
 3. **Context lost at handoff:** when agent A passes data to agent B, the norms it was shared under do not travel with it. Does attaching the source context to each message reduce downstream leaks? Closest prior work: Judging Before Propagation.
 
 Novelty is unchecked beyond four web searches.

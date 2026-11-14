@@ -3,9 +3,9 @@ type: entity
 kind: benchmark
 title: "CIMemories"
 tags: [benchmark, llm-memory, contextual-integrity]
-sources: [mireshghallah-2025-cimemories, goel-2026-privacy-collapse, goel-2026-capable-but-careless]
+sources: [mireshghallah-2025-cimemories, goel-2026-privacy-collapse, goel-2026-capable-but-careless, gupta-2026-pisas]
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-14
 ---
 
 # CIMemories
@@ -31,6 +31,7 @@ A benchmark for whether a memory-augmented LLM assistant shares stored user memo
 
 - [[goel-2026-privacy-collapse]] uses 100 sampled scenarios with a gpt-5-nano judge as its memory setting, so its numbers are not comparable to the original Table 1.
 - [[goel-2026-capable-but-careless]] cites it as a persistent-memory CI benchmark and scopes memory out of [[agentcibench|AgentCIBench]].
+- [[gupta-2026-pisas]] classes it as a single-user benchmark and borrows its prompt-level privacy instructions for [[pisas|PiSAs]].
 
 ## Caveats
 
