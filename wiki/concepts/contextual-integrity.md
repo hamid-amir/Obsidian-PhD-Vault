@@ -16,6 +16,8 @@ updated: 2026-11-12
 
 Every context has unwritten rules, or norms, about where information should go. A privacy violation happens when information moves in a way that breaks those norms.
 
+Under CI, privacy is not a property of data in isolation but of information flows: the same attribute can be appropriate to share in one task context and a violation in another
+
 Take your medical diagnosis:
 
 - You tell your **doctor**: fine. That's what the doctor context is for.

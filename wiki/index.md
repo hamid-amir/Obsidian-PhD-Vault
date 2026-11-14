@@ -12,6 +12,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 
 - [[goel-2026-capable-but-careless]] — AgentCIBench: 15 computer-use agents leak without an attacker (mean 67.9%); capability ≠ carefulness; prompt defenses cut leakage ~35 pts (EMNLP 2026)
 - [[goel-2026-privacy-collapse]] — benign fine-tuning (helpful, empathetic, support data) breaks contextual privacy while safety/capability hold; can be backdoored; data filtering helps partly (ACL 2026)
+- [[gupta-2026-pisas]] — PiSAs: CI benchmark for multi-user agentic systems (arXiv 2026, seed)
 - [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
 

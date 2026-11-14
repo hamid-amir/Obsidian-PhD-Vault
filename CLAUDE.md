@@ -45,7 +45,7 @@ Use the **`llm-wiki`** skill for every wiki operation. Read `wiki/SCHEMA.md` bef
 
 ## Sync between two machines
 
-The vault is a git repo (`github.com:hamid-amir/Obsidian-PhD-Vault`), synced by the Obsidian Git plugin on a Linux machine (`/home/hamid/PhD-Vault`) and a Mac. Both auto-commit and push every few minutes.
+The vault is a git repo (`github.com:hamid-amir/Obsidian-PhD-Vault`), synced by the Obsidian Git plugin on a Linux machine (`/home/hamid/PhD-Vault`) and a Mac (`/Users/hamidreza/PhD Vault`). Both auto-commit and push every few minutes.
 
 - Assume the other machine may have pushed: work from the current files on disk, never from an old copy.
 - The Mac filesystem is case-insensitive: never create two paths that differ only by case, and never rename by case alone.
