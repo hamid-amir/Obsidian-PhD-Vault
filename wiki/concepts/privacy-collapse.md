@@ -4,7 +4,7 @@ title: "Privacy collapse"
 tags: [fine-tuning, contextual-integrity, defenses]
 sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless]
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-15
 ---
 
 # Privacy collapse
@@ -30,6 +30,12 @@ Only one source covers this so far, so everything below is that paper's evidence
 - On Llama-3-8B, late-layer privacy representations change after fine-tuning while commonsense ones do not.
 - Filtering the 10% of training samples that score lowest on a privacy projection roughly halves the drop on EmpatheticDialogues for two models; mixing control data into helpful data helps only partly (50% helpful still gives −65.0 on gpt-4o-mini).
 - In-context demonstrations (32–256) did not cause collapse, so the paper treats it as a parameter-level change.
+
+> [!note] Side note: dropping vs swapping training samples (not an ingested source)
+> From a blog post, [Why Do Naive SFT Filters For Safety Properties Fail?](https://www.lesswrong.com/posts/wyZRNgpeiPeRXB6eT/why-do-naive-sft-filters-for-safety-properties-fail) (Josh Engels and Neel Nanda, LessWrong, 14 Jun 2026), an informal research update from Google DeepMind's interpretability team. Read on 2026-11-14 from the page text; figures were not read and the text gives no numbers. The post says nothing about privacy. A paraphrased record is in `raw/engels-2026-naive-sft-filters.md`.
+> - **Finding:** dropping the training samples that carry an unwanted trait (blackmail, date confusion) leaves the trait, because "adjacent behavior 'leaks in' and fills in the gaps"; swapping those samples' completions removes it. Their takeaway: "It's hard to remove behaviors via filtering."
+> - **Relevance here:** consistent with filtering only halving the drop in [[goel-2026-privacy-collapse]]. It is a parallel, not a test: the setting is teacher distillation with topic-based filters, while the paper filters by an activation projection.
+> - **Untested experiment (Claude's suggestion):** the paper has paired helpful and control responses for the same prompts, so the highest-risk samples could be swapped to their control version and compared against dropping them. The paper's mixing table swaps a random fraction only.
 
 ## Open questions
 

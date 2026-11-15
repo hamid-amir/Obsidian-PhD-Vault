@@ -28,3 +28,9 @@ Operations:
 ## [2026-11-12] ingest | PiSAs, arXiv 2607.05318 — seed page [[gupta-2026-pisas]] created with verified metadata only; index updated.
 
 ## [2026-11-14] ingest | PiSAs, arXiv 2607.05318 — seed upgraded to ingested from the v2 PDF text (19 Oct 2026; Appendices H–P and figures not read). v1 numbers discarded. New [[pisas]]; updated privacy-leakage-in-agents (settings map, evidence), privacy-leakage-in-llm-memory, prompt-defenses-for-contextual-privacy, contextual-integrity, cimemories, index. No Zotero annotations found; zotero citekey not set. No typed graph edges added.
+
+## [2026-11-14] ingest | Why Do Naive SFT Filters For Safety Properties Fail? (Engels & Nanda, LessWrong) — paraphrased clipping saved to raw/engels-2026-naive-sft-filters.md; new source page engels-2026-naive-sft-filters (figures not read; page later removed); open question added to privacy-collapse; index updated.
+
+## [2026-11-15] ingest | Side note on the J-lens blog post (Louapre, Hugging Face) added to privacy-leakage-in-agents at Hamid's request; no source page or raw clipping created.
+
+## [2026-11-15] ingest | Removed source page engels-2026-naive-sft-filters at Hamid's request; content kept as a side note on privacy-collapse; raw clipping left in place; index updated.

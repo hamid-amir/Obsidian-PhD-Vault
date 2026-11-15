@@ -4,7 +4,7 @@ title: "Privacy leakage in agents"
 tags: [agents, contextual-integrity, defenses]
 sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas]
 created: 2026-11-09
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 
 # Privacy leakage in agents
@@ -46,6 +46,13 @@ The first three rows follow [[gupta-2026-pisas]]; the last row is not yet backed
 Safety-tuned models in that study kept the last two low but still leaked under visual co-location.
 
 [[gupta-2026-pisas]] adds a multi-user distinction: an **appropriateness violation** (using something the task does not need) versus a **visibility violation** (information reaching a teammate who should not see it). The second can occur inside the system, in messages, agent context or memory, without appearing in any output.
+
+> [!note] Side note: J-lens as a possible analysis tool (not an ingested source)
+> From a blog post, [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) (David Louapre, Hugging Face, 13 Jul 2026), which explains Anthropic's J-lens method. Read on 2026-11-15 from the page text; figures and the underlying Anthropic paper were not read. The post says nothing about privacy.
+> - **What it is:** an improved logit lens that reads which words an internal activation is "poised to make the model say", including unspoken intermediate steps. Swapping one concept for another can change the answer. One fit per model on unlabelled text; pre-fitted lenses for open models are on Neuronpedia.
+> - **A commenter (Matias)** reports using it to debug agents on Qwen models: missing context shows as "need info" concepts, while an execution slip leaves the internal state looking "healthy". Anecdotal, no numbers or controls.
+> - **Possible uses here (Claude's suggestions):** check whether privacy-related concepts are active before a leak (knew vs did not know); redo the logit-lens analysis of [[goel-2026-privacy-collapse]] before and after fine-tuning; swap the recipient concept to test whether the disclosure decision depends on it.
+> - **Limits stated in the post:** needs open weights; concepts must fit roughly one token; explains at most about 10% of activation variance beyond a random control; concept swaps worked in 76 of 192 trials.
 
 ## Open questions
 
