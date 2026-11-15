@@ -34,3 +34,5 @@ Operations:
 ## [2026-11-15] ingest | Side note on the J-lens blog post (Louapre, Hugging Face) added to privacy-leakage-in-agents at Hamid's request; no source page or raw clipping created.
 
 ## [2026-11-15] ingest | Removed source page engels-2026-naive-sft-filters at Hamid's request; content kept as a side note on privacy-collapse; raw clipping left in place; index updated.
+
+## [2026-11-15] ingest | J-lens side note on privacy-leakage-in-agents extended with the original Anthropic post (monitoring section) and four research ideas, at Hamid's request; no source page created.

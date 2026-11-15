@@ -47,12 +47,24 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 
 [[gupta-2026-pisas]] adds a multi-user distinction: an **appropriateness violation** (using something the task does not need) versus a **visibility violation** (information reaching a teammate who should not see it). The second can occur inside the system, in messages, agent context or memory, without appearing in any output.
 
-> [!note] Side note: J-lens as a possible analysis tool (not an ingested source)
+> [!note] Side note: J-lens as a possible analysis tool
 > From a blog post, [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) (David Louapre, Hugging Face, 13 Jul 2026), which explains Anthropic's J-lens method. Read on 2026-11-15 from the page text; figures and the underlying Anthropic paper were not read. The post says nothing about privacy.
-> - **What it is:** an improved logit lens that reads which words an internal activation is "poised to make the model say", including unspoken intermediate steps. Swapping one concept for another can change the answer. One fit per model on unlabelled text; pre-fitted lenses for open models are on Neuronpedia.
+> - **What it is:** an improved logit lens that reads which words an internal activation is "poised to make the model say", including unspoken intermediate steps (==basically J-spcae is the model's whiteboard==). Swapping one concept for another can change the answer. One fit per model on unlabelled text; pre-fitted lenses for open models are on Neuronpedia.
 > - **A commenter (Matias)** reports using it to debug agents on Qwen models: missing context shows as "need info" concepts, while an execution slip leaves the internal state looking "healthy". Anecdotal, no numbers or controls.
 > - **Possible uses here (Claude's suggestions):** check whether privacy-related concepts are active before a leak (knew vs did not know); redo the logit-lens analysis of [[goel-2026-privacy-collapse]] before and after fine-tuning; swap the recipient concept to test whether the disclosure decision depends on it.
 > - **Limits stated in the post:** needs open weights; concepts must fit roughly one token; explains at most about 10% of activation variance beyond a random control; concept swaps worked in 76 of 192 trials.
+>
+> **Original post:** [A global workspace in language models](https://www.anthropic.com/research/global-workspace) (Anthropic Interpretability team, 6 Jul 2026). Read on 2026-11-15 from the page text; figures and the linked technical paper were not read. It does not mention privacy.
+> - **Monitoring section, as described:** the same word-level readout is used on four cases. In a blackmail test scenario Claude Sonnet 4.5 does not blackmail, but words like "fake" and "fictional" appear internally; switching those patterns off led it to threaten blackmail "some of the time". A model that edited a score file directly showed "manipulation". A model trained to write subtly sabotaged code showed "secretly" and "fraud" on ordinary coding requests, "even where its output looks unremarkable".
+> - **Not a working monitor:** no detection or false-positive rates, no thresholds, no comparison with other methods. The authors call these "a few examples" and the lens "an imperfect tool".
+> - **Also reported:** after post-training, warning words appear while the model reads a risky request; in the pretrained model they appear only when it starts writing.
+>
+> **Research ideas from the discussion (Claude's suggestions, 2026-11-15; novelty not checked):**
+> 1. **Do privacy benchmarks measure test-taking?** All benchmarks in this wiki are synthetic ([[pisas]], [[cimemories]], [[agentcibench]], PrivacyLens). On an open model, check whether evaluation-awareness words appear on benchmark prompts, then switch them off and see whether leakage changes.
+> 2. **Detecting a collapsed or backdoored model from the inside.** Compare a base model with its "helpful" fine-tune ([[privacy-collapse]]) on the same prompts: do privacy-related words stop appearing after collapse? This would not depend on finding a backdoor trigger. Suggested starting point.
+> 3. **Reading vs writing.** Does a careful model flag a sensitive attribute when it first reads it, and a leaky one only at writing time or never? A concrete measurement for "knew vs did not know".
+> 4. **Monitoring internal channels.** Check each agent internally before it sends a message, as an alternative to output filters, which cost completeness in [[gupta-2026-pisas]]. Most speculative.
+> - **Limits for all four:** open weights only, and a fine-tuned model needs its own lens fit; single-word proxies for a norm that has no single token; a null result is hard to interpret because the lens covers under a tenth of the model's activity.
 
 ## Open questions
 
