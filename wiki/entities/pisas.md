@@ -5,7 +5,7 @@ title: "PiSAs"
 tags: [benchmark, agents, contextual-integrity, llm-memory]
 sources: [gupta-2026-pisas]
 created: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-16
 ---
 
 # PiSAs
@@ -43,3 +43,4 @@ A benchmark for [[contextual-integrity]] in multi-user agentic systems, where a 
 
 - [[cimemories]] (single user, persistent memory) and [[agentcibench]] (single user, computer use)
 - [[privacy-leakage-in-agents]]
+- Compared with the other benchmarks in [[benchmarks-at-a-glance]].

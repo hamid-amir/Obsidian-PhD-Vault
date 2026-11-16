@@ -18,6 +18,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 
 ## Entities
 
+- [[benchmarks-at-a-glance]] — summary table of all benchmarks with a page (setting, unit, size, labels, metrics, scoring, headline, caveats); add a row on every benchmark ingest
 - [[pisas]] — CI benchmark for multi-user agentic systems; 265 scenarios, nine task families, appropriateness + visibility labels, three topologies
 - [[cimemories]] — CI benchmark for persistent memory; 10 profiles, ~147 attributes, GPT-5 persona labels; Violation@n and completeness
 - [[agentcibench]] — CI disclosure benchmark for computer-use agents; 117 MCTS-generated scenarios, three failure modes

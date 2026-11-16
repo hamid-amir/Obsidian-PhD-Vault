@@ -36,3 +36,5 @@ Operations:
 ## [2026-11-15] ingest | Removed source page engels-2026-naive-sft-filters at Hamid's request; content kept as a side note on privacy-collapse; raw clipping left in place; index updated.
 
 ## [2026-11-15] ingest | J-lens side note on privacy-leakage-in-agents extended with the original Anthropic post (monitoring section) and four research ideas, at Hamid's request; no source page created.
+
+## [2026-11-16] query | New entity page [[benchmarks-at-a-glance]]: summary table of AgentCIBench, CIMemories and PiSAs built from their entity and source pages, at Hamid's request; to be extended on every benchmark ingest. Linked from agentcibench, cimemories, pisas and index.

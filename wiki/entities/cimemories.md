@@ -5,7 +5,7 @@ title: "CIMemories"
 tags: [benchmark, llm-memory, contextual-integrity]
 sources: [mireshghallah-2025-cimemories, goel-2026-privacy-collapse, goel-2026-capable-but-careless, gupta-2026-pisas]
 created: 2026-11-12
-updated: 2026-11-14
+updated: 2026-11-16
 ---
 
 # CIMemories
@@ -38,3 +38,7 @@ A benchmark for whether a memory-augmented LLM assistant shares stored user memo
 - Labels are model consensus (GPT-5), with no human validation reported, and GPT-5 is also evaluated.
 - Single turn, no tools, synthetic profiles.
 - See the caution callout on [[mireshghallah-2025-cimemories]] for inconsistencies in the paper.
+
+## Related
+
+- Compared with the other benchmarks in [[benchmarks-at-a-glance]].
