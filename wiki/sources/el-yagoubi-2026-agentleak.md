@@ -137,7 +137,7 @@ Benign subset, sample size not reported (Table 9, %):
 | LlamaGuard | 6 | 30 |
 | PromptGuard | 8 | 29 |
 
-- Every defense tested acts on the output and leaves internal leakage at about 30%. No utility numbers are given for these rows.
+- ==Every defense tested acts on the output and leaves internal leakage at about 30%==. No utility numbers are given for these rows.
 - **Interceptor prototype:** masks vault fields outside each channel's allowed set in inter-agent messages and memory writes. On 120 scenarios (CrewAI and LangChain): internal leakage 31.5% → 2.4%, external unchanged (8.2% vs 8.1%), task success 78.6% → 73.9%, with the loss mostly in scenarios that need legitimate inter-agent sharing. The interceptor is given the allowed set, so it is closer to an oracle filter than a deployable defense (this last remark is Claude's reading, not the paper's).
 - Under strict sharing bans on 50 dedicated scenarios, task success falls to 35–65%.
 - See [[prompt-defenses-for-contextual-privacy]].
