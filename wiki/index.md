@@ -10,16 +10,16 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 
 ## Sources
 
-- [[el-yagoubi-2026-agentleak]] — AgentLeak: two-agent systems leak less in the output (27.2%) but over-share in inter-agent messages (68.8%) and memory, attacker or not; output defenses miss it; minimization, not CI (arXiv 2026, v3)
+- [[el-yagoubi-2026-agentleak]] — AgentLeak: two-agent systems leak less in the output (27.2%) but over-share in inter-agent messages (68.8%) and memory, attacker or not; output defenses miss it; minimization, not CI (arXiv 2026)
 - [[goel-2026-capable-but-careless]] — AgentCIBench: 15 computer-use agents leak without an attacker (mean 67.9%); capability ≠ carefulness; prompt defenses cut leakage ~35 pts (EMNLP 2026)
 - [[goel-2026-privacy-collapse]] — benign fine-tuning (helpful, empathetic, support data) breaks contextual privacy while safety/capability hold; can be backdoored; data filtering helps partly (ACL 2026)
-- [[gupta-2026-pisas]] — PiSAs: teams sharing one agent system spill info between teammates; per-user agents and memory relocate leaks; 79.6–100% of runs fail (arXiv 2026, v2)
+- [[gupta-2026-pisas]] — PiSAs: teams sharing one agent system spill info between teammates; per-user agents and memory relocate leaks; 79.6–100% of runs fail (arXiv 2026)
 - [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
 
 ## Entities
 
-- [[benchmarks-at-a-glance]] — summary table of all benchmarks with a page (setting, unit, size, labels, metrics, scoring, headline, caveats); add a row on every benchmark ingest
+- [[benchmarks-at-a-glance]] — summary table of all benchmarks with a page (setting, unit, size, labels, metrics, scoring, headline); add a row on every benchmark ingest
 - [[pisas]] — CI benchmark for multi-user agentic systems; 265 scenarios, nine task families, appropriateness + visibility labels, three topologies
 - [[cimemories]] — CI benchmark for persistent memory; 10 profiles, ~147 attributes, GPT-5 persona labels; Violation@n and completeness
 - [[agentleak]] — benchmark for internal-channel leakage in multi-agent systems; 1,000 scenarios, vault vs allowed set, seven channels, two-agent coordinator-worker

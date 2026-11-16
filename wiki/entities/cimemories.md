@@ -37,7 +37,6 @@ A benchmark for whether a memory-augmented LLM assistant shares stored user memo
 
 - Labels are model consensus (GPT-5), with no human validation reported, and GPT-5 is also evaluated.
 - Single turn, no tools, synthetic profiles.
-- See the caution callout on [[mireshghallah-2025-cimemories]] for inconsistencies in the paper.
 
 ## Related
 

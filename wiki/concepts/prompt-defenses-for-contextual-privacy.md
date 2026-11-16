@@ -21,12 +21,12 @@ Instructions added to the system prompt that ask a model or agent to reason abou
   - Contrast: an external redaction filter without task context also cut leakage but collapsed utility (63.3% → 22.5%). The paper's reading: in-context reasoning about the recipient preserves the task, blind redaction does not.
   - Limits: three models, three prompts, single-shot actions in a synthetic workspace.
 - **Memory ([[mireshghallah-2025-cimemories]], [[cimemories|CIMemories]]):** three prompts on GPT-5 only, results in a figure with no numbers in the text. The medium and high prompts ask for less ("Only include information that is necessary", "the ABSOLUTE MINIMUM set of attributes ... PRIORITIZING PRIVACY above all else"). They reduce violations ==at the cost of completeness==; the authors say conservative language "simply reduces overall verbosity" and conclude that "privacy-conscious prompting does not solve this".
-- **Multi-user systems ([[gupta-2026-pisas]], [[pisas|PiSAs]]):** a privacy instruction at three levels (None, Low, High) is the default defense, credited to CIMemories. Even at High, 79.6–100% of runs fail. The v2 prompt wording and the per-level numbers were not read; in v1 the High prompt was a share-less instruction.
+- **Multi-user systems ([[gupta-2026-pisas]], [[pisas|PiSAs]]):** a privacy instruction at three levels (None, Low, High) is the default defense, credited to CIMemories. Even at High, 79.6–100% of runs fail.
   - Non-prompt comparison (single agent): output filters (Privasis, PrivacyChecker) cut appropriateness violations from 24.8% to 6% but drop completeness from 97.0% to about 75–78%. A small CI-trained model (PrivacyAlign-Nemotron-4B) did worse than the generalist (76.2%).
 - **Multi-agent internal channels ([[el-yagoubi-2026-agentleak]], [[agentleak|AgentLeak]]):** on a benign subset, a privacy prompt cut final-output leakage from 48% to 19% but left leakage in inter-agent messages and shared memory almost unchanged (31% → 29%). Role separation behaved the same way (22%, 28%).
   - Output-side tools were stronger on the output and equally blind internally: output sanitizer 1% and 31%, LlamaGuard 6% and 30%, PromptGuard 8% and 29%.
   - Non-prompt comparison: a prototype that masks non-allowed fields in messages and memory writes cut internal leakage from 31.5% to 2.4%, with task success falling from 78.6% to 73.9%. It is given the ground-truth allowed set.
-  - Limits: prompt wording not read, sample size not reported, no utility numbers for the prompt rows, and the baseline (48%) does not match the paper's overall benign rate (26.6%).
+  - Limits: sample size not reported and no utility numbers for the prompt rows.
 
 ## Free lunch or trade-off
 

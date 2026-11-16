@@ -125,11 +125,16 @@ Generation is reproducible from markdown via `scripts/wiki_graph_extract.py`. Th
 - Ingest from Zotero: read the paper itself (arXiv URL or the PDF in Zotero, in chunks), plus Hamid's annotations in `raw/zotero/<citekey>.md` if present. Use the Better BibTeX citekey as the `zotero` field, and link the annotations file as `raw`. Do not copy the PDF into the vault.
 - Upgrading a `seed` page: re-read the full text, verify every claim and number already on the page, keep Hamid's takeaways (label them as his notes), then set `status: ingested` and `ingested: <date>`.
 - `Papers.base` (vault root) is an Obsidian Bases table over `wiki/sources/`. Keep source frontmatter keys consistent so it renders.
+- Benchmark table: whenever an ingest adds or changes a benchmark, add or update its row in `wiki/entities/benchmarks-at-a-glance.md`. Keep its current columns (no paper, models-tested or caveats columns) and keep each cell to one short phrase.
+- Always work from the latest version of a paper. Do not record version histories or differences between versions.
 
 ## User preferences
 
 - Use Obsidian callouts (`> [!note]`, `> [!caution]`, …) and `==highlights==`. Never use HTML tags such as `<font color>`.
 - Hamid's own takeaways are worth keeping verbatim; mark them as his notes rather than rewriting them in wiki voice.
+- Keep pages short and focused on what matters for Hamid's research (contextual privacy). Cover the rest of a paper in a line or leave it out.
+- No sections, callouts or caveat lines about internal inconsistencies in a paper (numbers or statements that disagree within the same paper). A short section on the paper's gaps and limitations is welcome. Contradictions between different sources are still recorded.
+- No notes in wiki pages about how a paper was read (what was or was not read, extraction method, missing Zotero annotations). Put that in the `log.md` entry for the ingest instead.
 
 ## Lint cadence
 

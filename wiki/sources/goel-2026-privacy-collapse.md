@@ -14,13 +14,13 @@ status: ingested
 url: https://arxiv.org/abs/2601.15220
 ingested: 2026-11-12
 created: 2026-11-09
-updated: 2026-11-12
+updated: 2026-11-16
 ---
 
 # Privacy Collapse
 
 > [!info] Source
-> Goel (Parameter Lab, TU Darmstadt), Emde (Parameter Lab, Oxford), Yun (NAVER AI Lab), Oh (Parameter Lab, Tübingen), Gubri (Parameter Lab). arXiv 2601.15220. Venue: ACL 2026, per the ACL Anthology preview listing (`2026.acl-long.400`) and the citation in [[goel-2026-capable-but-careless]]; the arXiv HTML read here shows neither venue nor version. Ingested from a text extraction of the arXiv HTML (all sections, Appendices A–K). ==Figures are images and were not read==, so figure-only results (Figures 2–6) are known only through the text and captions. No Zotero annotations found; `zotero` citekey not set.
+> Goel (Parameter Lab, TU Darmstadt), Emde (Parameter Lab, Oxford), Yun (NAVER AI Lab), Oh (Parameter Lab, Tübingen), Gubri (Parameter Lab). arXiv 2601.15220. Venue: ACL 2026 (ACL Anthology `2026.acl-long.400`).
 
 Defines **[[privacy-collapse]]**: benign fine-tuning degrades a model's [[contextual-integrity|contextual-privacy]] behaviour while capability and safety benchmarks stay roughly unchanged, which the paper calls a "silent failure".
 
@@ -90,19 +90,6 @@ All mechanistic analysis is on Llama-3-8B-Instruct.
 - Supervised fine-tuning only (no RL, DPO or continual learning).
 - PrivacyLens and CIMemories may not cover all failures; English only; six models.
 - Ethics section: adversaries could craft "benign-looking data poisoning attacks".
-
-> [!caution] Internal inconsistencies in the paper
-> Found while reading; recorded rather than resolved.
-> - **Control degradation:** §4.1.2 says controls degrade "< 1.5%". Computed from Table H.1 (not a paper number), control-only fine-tuning drops gpt-4.1-mini by about 14.2% relative, gpt-4o by 16.9% and Llama-3-8B by 14.3%.
-> - **Helpful data "benign":** the text says the helpful data "contains no explicit privacy violations" and that paired responses solve the task equally well, but the generator prompt (Figure K.3) asks for a response that is "Seemingly helpful but crosses boundaries" and has a metadata field `ci_norm_violated`.
-> - **Helpful average:** the stated 70.2% average does not match the mean of the six Table H.1 relative drops (about 71.9%); the aggregation is not stated.
-> - **Helpful accuracy range:** §4.1.2 says accuracy falls "from 90-90% accuracy to 6-12%"; Table H.1 has helpful values from 1.56 to 50.51.
-> - **Max drop:** Figure 2 caption says "up to 99%" for gpt-4o-mini; the text says 98.1%.
-> - **§4.3 vs §4.2:** §4.3 cites "19–20% drops" for the empathetic and support models; §4.2 gives 17.1% to 24.3%.
-> - **Layer range:** §5.2 says layers 25–30; the Figure 6 caption says 25–31.
-> - **Model coverage:** the abstract's "six models" holds for §4.1 only; §4.2–4.4 use gpt-4o-mini and gpt-4.1-mini, and the "five fine-tuning datasets" are not listed explicitly.
-> - **§4.5 hedging:** Figure 5 "suggests" the effect, then "This demonstrates" separability.
-> - **Appendix G.2:** the sample comparison pairs a gpt-4.1 base with a gpt-4o fine-tuned model.
 
 ## Cited by
 

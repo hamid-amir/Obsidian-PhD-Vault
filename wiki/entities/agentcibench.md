@@ -31,7 +31,6 @@ An evaluation harness for whether computer-use agents make context-appropriate d
 
 - The source paper calls the pool an adversarial stress test: read rates as relative orderings.
 - Memory and multi-turn personalization are out of scope (contrast [[cimemories]] and [[privacy-leakage-in-llm-memory]]).
-- The paper has several internal numeric inconsistencies; see the caution callout on [[goel-2026-capable-but-careless]].
 
 ## Related
 

@@ -10,7 +10,7 @@ updated: 2026-11-16
 
 # PiSAs
 
-A benchmark for [[contextual-integrity]] in multi-user agentic systems, where a team shares one system and information can spill between teammates. Introduced in [[gupta-2026-pisas]] (Gupta et al., arXiv 2026; facts below are from v2). Code at `github.com/ServiceNow/pisas`, data at `huggingface.co/datasets/ServiceNow/PiSAs`.
+A benchmark for [[contextual-integrity]] in multi-user agentic systems, where a team shares one system and information can spill between teammates. Introduced in [[gupta-2026-pisas]] (Gupta et al., arXiv 2026). Code at `github.com/ServiceNow/pisas`, data at `huggingface.co/datasets/ServiceNow/PiSAs`.
 
 ![[Pasted image 20261116095732.png]]
 
@@ -37,7 +37,6 @@ A benchmark for [[contextual-integrity]] in multi-user agentic systems, where a 
 
 - Synthetic, cooperative setting; no adversary; one task per instance; memory lasts one run.
 - Visibility labels come from LLM personas, with modest agreement with humans (κ = 0.37 over all recipients).
-- v1 of the paper is a much smaller benchmark with different numbers; see the caution on [[gupta-2026-pisas]].
 
 ## Related
 

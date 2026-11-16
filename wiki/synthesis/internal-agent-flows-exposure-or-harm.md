@@ -20,7 +20,7 @@ Under [[contextual-integrity]] a flow needs a recipient. A worker agent in the s
 
 ## AgentLeak and PiSAs both score internal messages
 
-| | [[agentleak\|AgentLeak]] (v3) | [[pisas\|PiSAs]] (v2) |
+| | [[agentleak\|AgentLeak]] | [[pisas\|PiSAs]] |
 |---|---|---|
 | Who the agents stand for | Components of one enterprise deployment (coordinator and worker). Users and owners are not defined. | Each agent represents a different teammate, or one agent serves the whole team. |
 | Why an internal message is a violation | A vault field outside the task's allowed set appears on a channel. No new person needs to see it. | An attribute the task does not need is gathered or sent, or an attribute reaches a teammate (or their agent's memory) who should not have it. |

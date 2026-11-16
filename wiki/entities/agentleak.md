@@ -10,7 +10,7 @@ updated: 2026-11-16
 
 # AgentLeak
 
-A benchmark for privacy leakage through the internal channels of multi-agent LLM systems (inter-agent messages, shared memory), introduced in [[el-yagoubi-2026-agentleak]] (El Yagoubi et al., arXiv 2026; facts below are from v3). Code and data at `github.com/Privatris/AgentLeak`.
+A benchmark for privacy leakage through the internal channels of multi-agent LLM systems (inter-agent messages, shared memory), introduced in [[el-yagoubi-2026-agentleak]] (El Yagoubi et al., arXiv 2026). Code and data at `github.com/Privatris/AgentLeak`.
 
 ## At a glance
 
@@ -35,7 +35,6 @@ A benchmark for privacy leakage through the internal channels of multi-agent LLM
 - It measures internal over-sharing against a minimization rule, not disclosure to a person. The authors say not every internal over-share is a breach. See [[internal-agent-flows-exposure-or-harm]].
 - Two agents and one topology only.
 - The lower output leakage with two agents may be a prompt-structure effect, as the authors admit.
-- The paper has many internal numeric inconsistencies, and it was read through model extractions; see the callouts on [[el-yagoubi-2026-agentleak]].
 
 ## Related
 

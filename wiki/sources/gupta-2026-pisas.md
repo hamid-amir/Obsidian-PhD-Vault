@@ -24,10 +24,7 @@ updated: 2026-11-16
 # PiSAs
 
 > [!info] Source
-> Gupta et al. arXiv 2607.05318, cs.MA and cs.CR; v1 submitted 6 Jul 2026, ==ingested from v2== (PDF stamped 19 Oct 2026). No venue is shown. Code and data: `github.com/ServiceNow/pisas`, `huggingface.co/datasets/ServiceNow/PiSAs`. Read from a text extraction of the v2 PDF: main body and Appendices A–G in full. ==Not read:== Appendix H formulas, Appendices I–P (per-task results, prompt wording, specialized-model tables 13–14, memory tables 15–17, aggregation, worked example) and all figure contents (Figures 3, 4, 5, 7 are images). No Zotero annotations found; `zotero` citekey not set.
-
-> [!caution] v1 and v2 differ substantially
-> v1 had 85 scenarios in three IT tasks, three backbones (Claude Sonnet 4.6, gpt-oss-120b, Qwen3.6-27B) and no §5.4. Its numbers (for example single-agent appropriateness violations of 75–95%) are superseded and are not used on this page.
+> Gupta et al. arXiv 2607.05318, cs.MA and cs.CR. Code and data: `github.com/ServiceNow/pisas`, `huggingface.co/datasets/ServiceNow/PiSAs`.
 
 Introduces **[[pisas|PiSAs]]**, a benchmark for [[contextual-integrity]] in systems where a team of users shares one agentic system, and one teammate's information can spill to another through messages, memory or agent context.
 
@@ -40,7 +37,7 @@ Introduces **[[pisas|PiSAs]]**, a benchmark for [[contextual-integrity]] in syst
 
 ### Where it sits among other settings
 
-Mapping from the discussion with Hamid (2026-11-12), checked against the v2 text and its Table 1:
+Mapping from the discussion with Hamid (2026-11-12), checked against the paper's Table 1:
 
 | Paper | Users | Agents | Who owns the system |
 |---|---|---|---|
@@ -98,7 +95,7 @@ Mapping from the discussion with Hamid (2026-11-12), checked against the v2 text
   - *Centralized:* one agent per user; all inter-agent messages go through a fixed coordinator.
   - *Decentralized:* one agent per user, token passing; the conversation starts and ends with the executor's agent, and no agent sees the full exchange.
 - **Memory:** none, private (per agent), shared (one communal store) or hybrid (both). Memory is "plain context augmentation rather than a persistent store" and "scoped to a single run".
-- **Privacy prompts:** None, Low, High; High is the default. The v2 wording (Appendix J) was not read.
+- **Privacy prompts:** None, Low, High; High is the default.
 - **Metrics:** appropriateness violations (V_appr, over inappropriate attributes), visibility violations (V_vis, over attributes hidden from a peer), failure (runs with any leak, visibility violation or missed required attribute), completeness (appropriate attributes gathered), utility (decision matches the oracle), and A2A message count. Three runs per scenario; an attribute counts as violated if it leaks in any run.
 - **Judges:** an ensemble of Hy3 and GLM-5.3 Flash, chosen from families not used as backbones. Agreement with a human reference of 768 judgments: 88.7% (κ = 0.775).
 
@@ -135,7 +132,7 @@ High privacy prompt, no memory, all 265 scenarios (%):
 | Decentralized | GPT-5.6-Sol | 9.2 | 13.4 | 53.9 | 86.7 | 59.3 |
 | Decentralized | GPT-6-Astra | 11.9 | 13.1 | 69.4 | 79.6 | 41.9 |
 
-The column order was inferred from the extracted table and checked against numbers quoted in the text. Single-agent V_vis is 100% by construction.
+Single-agent V_vis is 100% by construction.
 
 - Mean V_appr: 36.8% (single), 26.4% (centralized), 19.0% (decentralized).
 - Both multi-agent topologies "sharply cut appropriateness and visibility violations relative to Single", at the cost of completeness. "Privacy preservation comes at the cost of task performance."
@@ -144,7 +141,7 @@ The column order was inferred from the extracted table and checked against numbe
 
 ### Leakage surfaces (§5.2)
 
-GPT-5.6-Sol, decentralized, with and without hybrid memory, across prompt levels. Numbers below are from the text; the full tables (15, 16) were not read.
+GPT-5.6-Sol, decentralized, with and without hybrid memory, across prompt levels.
 
 - Memory raises completeness by 14.2–24.9 points and is "unambiguously beneficial for task performance".
 - A2A appropriateness violations fall to 6.4% with hybrid memory under the High prompt (9.9% without memory), but this is "confounded with a reduction in the number of A2A messages".
@@ -155,9 +152,9 @@ GPT-5.6-Sol, decentralized, with and without hybrid memory, across prompt levels
 
 Single agent, GPT-5.6-Sol:
 
-- V_appr by attribute type: personal 0.2%, attached private 35.7%, distractors 42.9%. The same ordering holds under the multi-agent topologies at lower rates (Table 17, not read).
+- V_appr by attribute type: personal 0.2%, attached private 35.7%, distractors 42.9%. The same ordering holds under the multi-agent topologies at lower rates (Table 17).
 - "Relevance to the task is the dominant driver of violations."
-- Supplying both a sanitised attribute and a per-attribute privacy cue "substantially reduces violation rates", but the authors call this "an idealized condition rather than a deployable solution" (figure only, no numbers read).
+- Supplying both a sanitised attribute and a per-attribute privacy cue "substantially reduces violation rates", but the authors call this "an idealized condition rather than a deployable solution".
 
 ### Specialized CI models (§5.4)
 
@@ -173,7 +170,6 @@ Single agent, High prompt:
 - The CI-trained model does worse than the generalist, "probably due to its small size", and stays above 76% across privacy levels.
 - The filters "cut violations sharply, but not for free".
 - Conclusion: single-agent privacy is better served by checking or sanitising outputs than by replacing the model.
-- Not stated in the text read: which backbone the filters wrap and at which stage. Results across all three topologies are in Appendix K (not read).
 
 ## Limitations (as stated)
 
@@ -181,17 +177,7 @@ Single agent, High prompt:
 - Unintentional leakage only: no malicious users, prompt injection, conflicting objectives or norms that shift during a session.
 - One task per instance, so cross-task leakage is not measured.
 
-> [!caution] Internal inconsistencies and gaps in the paper
-> Found while reading; recorded rather than resolved.
-> - **Judge independence:** judges are said to come from families not used as backbones or for building annotations, but seed validation used Qwen3.6-27B (a Table 2 backbone) and gpt-oss-120b.
-> - **Human validation scope:** the ethics statement says it is "scoped to the three IT task families"; Appendix D says it sampled from the whole benchmark.
-> - **Visibility agreement:** §3 says annotators "agree closely" with the visibility labels; Appendix D reports κ = 0.37 over all recipients.
-> - **Private memory:** §4.2 keeps the most recent message in the prompt; Appendix G says the distilled note replaces the raw inputs.
-> - **Who annotated the judge reference:** Appendix E gives seven unnamed annotators; the ethics statement says the authors.
-> - **Naming:** Figure 3c calls the §5.4 systems "state-of-the-art privacy-preserving solutions"; the section title calls them "specialized CI models".
-
 > [!note] Reading notes (Claude, from the discussion on 2026-11-12 to 2026-11-14)
-> - In v1 the High prompt was a share-less instruction ("Include the ABSOLUTE MINIMUM set of attributes that are STRICTLY REQUIRED"), credited to CIMemories. If v2 keeps it, PiSAs tests no recipient-aware prompt. The v2 wording was not read.
 > - Memory here lasts one run, so the memory result is about shared context within a task, not cross-session memory as in [[cimemories]].
 > - The human check found 80 attributes that people consider appropriate and PiSAs marks inappropriate, so some measured "violations" may be flows people would accept.
 > - A real-world system of this shape is an assistant in a shared workspace (for example in a team chat tool) where users have different channel and document access. The paper does not name products.

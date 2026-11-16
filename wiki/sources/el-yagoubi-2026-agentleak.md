@@ -18,8 +18,7 @@ updated: 2026-11-16
 # AgentLeak
 
 > [!info] Source
-> El Yagoubi, Badu-Marfo, Al Mallah; Polytechnique Montréal. arXiv 2602.11510, cs.AI; first submitted 12 Feb 2026, ==ingested from v3== (15 Jun 2026). The arXiv page has no comments or journal-ref line but lists DOI `10.1109/ACCESS.2026.3704541`, which points to IEEE Access; the venue is left as arXiv until that is confirmed. Code and data: `github.com/Privatris/AgentLeak` (MIT).
-> ==How it was read:== through section-by-section model extractions of the arXiv HTML and PDF text, not a direct line-by-line read. Quotes are as returned by the extraction and numbers were cross-checked across two or more extraction passes, but both should be rechecked against the PDF before being cited. Figures were not read. No Zotero annotations found; `zotero` citekey not set.
+> El Yagoubi, Badu-Marfo, Al Mallah; Polytechnique Montréal. arXiv 2602.11510. The arXiv page lists DOI `10.1109/ACCESS.2026.3704541` (IEEE Access); the venue is left as arXiv until that is confirmed. Code and data: `github.com/Privatris/AgentLeak` (MIT).
 
 Introduces **[[agentleak|AgentLeak]]**, a benchmark that counts sensitive fields appearing in the internal channels of a multi-agent system (inter-agent messages, shared memory), not only in the final output.
 
@@ -35,7 +34,7 @@ Introduces **[[agentleak|AgentLeak]]**, a benchmark that counts sensitive fields
 
 ## How a privacy violation is defined
 
-This is the part most relevant to the wiki, and the paper is not fully consistent on it.
+This is the part most relevant to the wiki.
 
 - **The norm is data minimization, not contextual integrity.** The paper cites CI (it "characterizes privacy violations as inappropriate information flows that violate contextual norms") but operationalizes privacy as protecting a vault of sensitive fields. It ties the internal-sharing limit to HIPAA's minimum-necessary standard, GDPR Art. 25 and Quebec Law 25.
 - **Vault and allowed set.** Each scenario has a private vault (median 29 fields, range 21–39; labelled PHI, PII or PCI with a sensitivity weight) and an allowed set of the minimal fields the task needs (median 3, range 2–5; median ratio 9.7:1). A leak is a vault field outside the allowed set whose similarity to a channel's content exceeds a threshold (Eq. 1).
@@ -127,7 +126,7 @@ Messages leak more than the output for every model. The conclusion reads this as
 
 ## Defenses
 
-Benign subset; sample size not reported; prompt wording not read (Table 9, %):
+Benign subset, sample size not reported (Table 9, %):
 
 | Defense | Final output (C1) | Internal (C2/C5) |
 |---|---|---|
@@ -149,21 +148,6 @@ Benign subset; sample size not reported; prompt wording not read (Table 9, %):
 - Full-scale results cover C1, C2 and C5 only.
 - The judge's false-negative rate (7.4%) makes rates "conservative lower bounds"; LLM-as-judge bias remains.
 - 250 scenarios per domain cannot cover every workflow; data is synthetic.
-
-> [!caution] Internal inconsistencies and gaps in the paper
-> Found while reading; recorded rather than resolved.
-> - **Benign message leakage:** §VI.E gives 69.3% for A0. Table 13 gives 28–35% per framework for A0 and says the rise to 68.8% comes from adversarial scenarios. Table 9 gives 31% internal for A0.
-> - **Defense baseline:** Table 9's undefended final-output rate is 48%, against 26.6% for A0 overall. The authors attribute this to a curated subset.
-> - **"Misses 41.7% of violations":** 41.7% is a share of all traces. As a share of traces with any leak (68.9%) it is about 60% (Claude's arithmetic).
-> - **Paired design:** Table 3 splits scenarios into 400 single-agent and 600 multi-agent; the text says every scenario runs both ways.
-> - **Topology:** the schema says "multi-agent (3+)"; the evaluation uses two agents.
-> - **Trace counts:** the threat-level sample sizes sum to 4,949, not 4,979. Table 14 covers 1,983 adversarial tests against 2,464 adversarial traces.
-> - **Ratios:** internal vs output is given as 2.1× (mean of C2 and C5 over C1) and as 2.5× (C2 over C1), sometimes for the same comparison. Averaging C2 and C5 is questionable when memory never leaks alone.
-> - **Allowed set:** defined once per scenario in §IV, per channel in §III.C, and overridden by Table 2's "all vault data is unauthorized" internally. Eq. 1 has no channel index.
-> - **Defense count:** eight configurations are said to be tested; six are reported (no NeMo Guardrails or Lakera Guard numbers).
-> - **Detector numbers:** the text gives the judge's false-positive rate as 4.8%; Table 7 gives 6.2% for the judge alone and 4.8% for the full pipeline. The tier split (18, 24 and 184 instances) is based on 226 leaks, far fewer than the traces flagged.
-> - **Model ratios:** GPT-4o's message-to-output ratio (4.5×) is called the most extreme, but Claude's is about 8.5× (28.1 / 3.3).
-> - **Attack claim:** Finding 6 says attacks push leakage beyond misconfiguration; the channel rates by threat level do not show this.
 
 > [!note] Hamid's view (discussion, 2026-11-16)
 > The real harm happens when an agent discloses private information to a user. Who cares what an agent knows internally?

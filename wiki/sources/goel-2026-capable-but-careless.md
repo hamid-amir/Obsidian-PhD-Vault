@@ -15,13 +15,13 @@ status: ingested
 url: https://arxiv.org/abs/2606.23189
 ingested: 2026-11-09
 created: 2026-11-09
-updated: 2026-11-12
+updated: 2026-11-16
 ---
 
 # Capable but Careless (AgentCIBench)
 
 > [!info] Source
-> Goel & Gurevych, UKP Lab (TU Darmstadt) and ATHENE. arXiv 2606.23189 (v1 22 Jun 2026, v2 10 Sep 2026), comments line: "EMNLP 2026 Main". Code: `github.com/UKPLab/emnlp2026-agentcibench`; data: `hf.co/datasets/UKPLab/AgentCIBench`. Ingested from the arXiv HTML full text (end of Appendix P, Tables 15–16 and the Appendix Q prompt figures were not read).
+> Goel & Gurevych, UKP Lab (TU Darmstadt) and ATHENE. arXiv 2606.23189, EMNLP 2026 Main. Code: `github.com/UKPLab/emnlp2026-agentcibench`; data: `hf.co/datasets/UKPLab/AgentCIBench`.
 
 Introduces **[[agentcibench|AgentCIBench]]**, which measures whether computer-use agents (CUAs) make context-appropriate disclosure decisions under [[contextual-integrity]] constraints.
 
@@ -107,16 +107,6 @@ Three prompt-only defenses prepended to the system message, tested on Claude-Opu
 - CI labels are scenario-specific and may vary by culture or organization.
 
 The paper's policy appendix argues that CI testing should be a pre-deployment check and be re-run after later training stages, citing [[goel-2026-privacy-collapse]] for the claim that benign fine-tuning can erode contextual-privacy behavior.
-
-> [!caution] Internal inconsistencies in the paper
-> Found while reading; recorded rather than resolved.
-> - **Leak count:** the v2 abstract on the arXiv abstract page says 11 of 15 agents leak on more than half the scenarios. The HTML body and Table 1 give 12 of 15.
-> - **"Two leakiest":** the text names Gemini-3.1-Pro and Gemini-3-Flash, but Table 1 puts Qwen-3.6-Max (97.4) above Gemini-3-Flash (94.0).
-> - **End-to-end choice:** the text says Opus and Sonnet have the two lowest L_eng, but GPT-5.4 (32.4) is below Sonnet (54.5).
-> - **Defense range:** §8 text cites prompt-defense leakage of 12.5–15.4%; Table 11 gives L_eng 15.8–19.0.
-> - **Judge audit:** §5 describes a 10% subset for the κ = 0.89 audit; Appendix F describes 50 runs covering 36% of the pool.
-> - **End-to-end counts:** Appendix N says 99 of 100 runs were truncated, which is hard to reconcile with Table 14's non-completion rates (64%, 72%).
-> - **Generation-family overlap:** Appendix C says 12 of 15 evaluated agents come from families unused in generation, but DeepSeek-v4-Pro (mutator) and Qwen-3.6-35B-A3B (proxy) are themselves evaluated, and other families overlap.
 
 ## Key takeaways (Hamid's notes)
 

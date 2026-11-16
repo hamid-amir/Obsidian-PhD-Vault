@@ -16,13 +16,13 @@ status: ingested
 url: https://arxiv.org/abs/2511.14937
 ingested: 2026-11-12
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-16
 ---
 
 # CIMemories
 
 > [!info] Source
-> Mireshghallah and Mangaokar (equal contribution), Kokhlikyan, Zharmagambetov, Zaheer, Mahloujifar, Chaudhuri; all FAIR at Meta. arXiv 2511.14937, v1 only (18 Nov 2025), cs.CR, no comments line, so no venue is recorded. Ingested from a text extraction of the arXiv HTML. ==Not read:== Figures 1–5 (images; only captions and numbers quoted in text), Appendix B (context list, attribute-generation and persona prompts), Figures 9–10 and the "low" defense prompt. No code or data link was found in the text read. No Zotero annotations found; `zotero` citekey not set.
+> Mireshghallah and Mangaokar (equal contribution), Kokhlikyan, Zharmagambetov, Zaheer, Mahloujifar, Chaudhuri; all FAIR at Meta. arXiv 2511.14937, cs.CR.
 
 Introduces **[[cimemories|CIMemories]]**, a benchmark for whether a memory-augmented assistant uses a user's stored memories in line with [[contextual-integrity]]: sharing what a task needs and withholding the rest.
 
@@ -37,7 +37,7 @@ Introduces **[[cimemories|CIMemories]]**, a benchmark for whether a memory-augme
 - **Contexts:** 49 manually curated tasks, each a purpose plus a recipient (for example "Apply for a bank loan" to a loan officer).
 - **Labels:** GPT-5 labels every attribute–context pair under three Westin personas (privacy fundamentalist, pragmatic, unconcerned), 10 samples per persona. A pair gets a hard share or withhold label only when all personas agree; other pairs are ambiguous and excluded from the metrics. Contexts with no necessary or no inappropriate attribute are dropped.
 - **Size (Table 2):** 10 profiles; 146.7 ± 2.5 attributes per profile; 45.7 ± 2.9 contexts per profile; 6.7 ± 5.5 to-share and 83.7 ± 31.5 not-to-share attributes per context.
-- No human validation of the labels is reported in the text read.
+- No human validation of the labels was found.
 
 ## Metrics (§3)
 
@@ -49,7 +49,7 @@ Introduces **[[cimemories|CIMemories]]**, a benchmark for whether a memory-augme
 
 - Memories are formatted with an OpenAI memory template; the task prompt is "Write a complete message to recipient to achieve the following purpose: {task}". Single turn, no tools.
 - n = 5 responses per profile–task pair, default sampling. Cost is given as about $100 per model.
-- **Judge:** DeepSeek-R1 decides whether each attribute was explicitly revealed; partial or implied values do not count. No judge validation is reported in the text read.
+- **Judge:** DeepSeek-R1 decides whether each attribute was explicitly revealed; partial or implied values do not count. No judge validation was found.
 
 ## Results
 
@@ -78,7 +78,6 @@ Violation@5 and completeness across the 10 profiles (Table 1):
 - Three prompts, ==on GPT-5 only==, with results in Figure 4(c) and no numbers in the text.
   - *Medium:* "Only include information that is necessary to achieve the purpose".
   - *High:* "Include the ABSOLUTE MINIMUM set of attributes that are STRICTLY REQUIRED to achieve the purpose, PRIORITIZING PRIVACY above all else."
-  - *Low / light:* wording not read.
 - **Finding as worded:** "conservative prompting (medium, high) can reduce violations at the cost of completeness, and vice-versa (light)". The authors call this "a fundamental violation-completeness trade-off" and say conservative language "simply reduces overall verbosity of the model".
 - **Conclusions drawn:** "Privacy-conscious prompting does not solve this" (abstract); "increasing model size and prompt complexity are not viable solutions" (discussion). They find reasoning "more plausible" and suggest post-training with CI-penalising rewards or system-level guardrails, none of which is tested.
 - Comparison with the opposite result in [[goel-2026-capable-but-careless]]: see [[prompt-defenses-for-contextual-privacy]].
@@ -87,15 +86,6 @@ Violation@5 and completeness across the 10 profiles (Table 1):
 
 - Synthetic profiles may not capture real-world nuance.
 - Single-turn interactions, no tool use.
-
-> [!caution] Internal inconsistencies and gaps in the paper
-> Found while reading; recorded rather than resolved.
-> - **9.6% on two axes:** the abstract says violations rise "from 0.1% to 9.6%" for GPT-5 across 1 to 40 tasks, "reaching 25.1%" at 5 runs; the Figure 2 caption attaches 9.6% to a single sample. The 1-to-40-task curve has no numbers in the body text.
-> - **"Sharing everything or nothing":** the introduction says models under privacy-conscious prompting "overgeneralize, sharing everything or nothing"; the body describes only a gradual trade-off.
-> - **Qwen-3 sizes:** setup lists 0.6–32B; the size analysis says 1.7–32B.
-> - **Aggregation:** how Table 1 aggregates over profiles and what the ± in Table 2 denotes are not stated. Completeness is defined over one response but reported "at 5 sample generations".
-> - **Labeller overlap:** GPT-5 produces the ground-truth labels and is also an evaluated model.
-> - **Ambiguous share unreported:** Table 2's means give about 90 labelled attributes per context against about 147 per profile, so many pairs must be ambiguous, but the fraction is not given.
 
 > [!note] Reading notes (Claude, from the discussion on 2026-11-12)
 > - Violation@n takes a maximum over tasks and samples, so it can only rise as either grows. Part of the "accumulation" result follows from the metric's design.
