@@ -36,10 +36,10 @@ Introduces **[[agentleak|AgentLeak]]**, a benchmark that counts sensitive fields
 
 This is the part most relevant to the wiki.
 
-- **==The norm is data minimization, not contextual integrity==.** The paper cites CI (it "characterizes privacy violations as inappropriate information flows that violate contextual norms") but operationalizes privacy as protecting a vault of sensitive fields. It ties the internal-sharing limit to HIPAA's minimum-necessary standard, GDPR Art. 25 and Quebec Law 25.
-- **==Vault and allowed set==.** Each scenario has a private vault (median 29 fields, range 21–39; labelled PHI, PII or PCI with a sensitivity weight) and an allowed set of the minimal fields the task needs (median 3, range 2–5; median ratio 9.7:1). A leak is a vault field outside the allowed set whose similarity to a channel's content exceeds a threshold (Eq. 1).
+- **The norm is data minimization, not contextual integrity.** The paper cites CI (it "characterizes privacy violations as inappropriate information flows that violate contextual norms") but operationalizes privacy as protecting a vault of sensitive fields. It ties the internal-sharing limit to HIPAA's minimum-necessary standard, GDPR Art. 25 and Quebec Law 25.
+- **Vault and allowed set.** Each scenario has a private vault (median 29 fields, range 21–39; labelled PHI, PII or PCI with a sensitivity weight) and an allowed set of the minimal fields the task needs (median 3, range 2–5; median ratio 9.7:1). A leak is a vault field outside the allowed set whose similarity to a channel's content exceeds a threshold (Eq. 1).
 - **Who labels it:** two domain experts per vertical (compliance officer, financial auditor, legal counsel, corporate privacy officer) rate each field on a four-point scale; fields rated 3 or more by both enter the allowed set. Cohen's κ: healthcare 0.82, legal 0.81, finance 0.79, corporate 0.75.
-- **==Per channel, not per recipient==.** "A field may be allowed for some channels … but disallowed for others", and logs and artifacts are restricted "even if agents transiently need the information". There are no per-recipient allow lists.
+- **Per channel, not per recipient.** "A field may be allowed for some channels … but disallowed for others", and logs and artifacts are restricted "even if agents transiently need the information". There are no per-recipient allow lists.
 - **No actors are defined.** Users appear only as recipients of the final output. Data subjects, principals, recipients and agent owners are never defined; patients, clients and employees appear as examples, and the deployer is described as an enterprise.
 - **Three levels of severity,** given twice with different names:
   - §III.C: internal exposure (processing in context), effective leakage (transmission across a trust boundary, violating the allowed set), real harm.
@@ -137,7 +137,7 @@ Benign subset, sample size not reported (Table 9, %):
 | LlamaGuard | 6 | 30 |
 | PromptGuard | 8 | 29 |
 
-- ==Every defense tested acts on the output and leaves internal leakage at about 30%==. No utility numbers are given for these rows.
+- Every defense tested acts on the output and leaves internal leakage at about 30%. No utility numbers are given for these rows.
 - **Interceptor prototype:** masks vault fields outside each channel's allowed set in inter-agent messages and memory writes. On 120 scenarios (CrewAI and LangChain): internal leakage 31.5% → 2.4%, external unchanged (8.2% vs 8.1%), task success 78.6% → 73.9%, with the loss mostly in scenarios that need legitimate inter-agent sharing. The interceptor is given the allowed set, so it is closer to an oracle filter than a deployable defense (this last remark is Claude's reading, not the paper's).
 - Under strict sharing bans on 50 dedicated scenarios, task success falls to 35–65%.
 - See [[prompt-defenses-for-contextual-privacy]].
