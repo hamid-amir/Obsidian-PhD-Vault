@@ -12,6 +12,10 @@ updated: 2026-11-14
 
 A benchmark for [[contextual-integrity]] in multi-user agentic systems, where a team shares one system and information can spill between teammates. Introduced in [[gupta-2026-pisas]] (Gupta et al., arXiv 2026; facts below are from v2). Code at `github.com/ServiceNow/pisas`, data at `huggingface.co/datasets/ServiceNow/PiSAs`.
 
+![[Pasted image 20261116095732.png]]
+
+
+![[Pasted image 20261116095749.png]]
 ## At a glance
 
 - **Unit:** a scenario = a team with roles, an executor who must produce a decision, peers holding information, and a set of attributes on a workplace timeline.
