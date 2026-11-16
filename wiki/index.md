@@ -10,6 +10,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 
 ## Sources
 
+- [[el-yagoubi-2026-agentleak]] — AgentLeak: benchmark for internal-channel privacy leakage in multi-agent LLM systems (arXiv 2026, seed)
 - [[goel-2026-capable-but-careless]] — AgentCIBench: 15 computer-use agents leak without an attacker (mean 67.9%); capability ≠ carefulness; prompt defenses cut leakage ~35 pts (EMNLP 2026)
 - [[goel-2026-privacy-collapse]] — benign fine-tuning (helpful, empathetic, support data) breaks contextual privacy while safety/capability hold; can be backdoored; data filtering helps partly (ACL 2026)
 - [[gupta-2026-pisas]] — PiSAs: teams sharing one agent system spill info between teammates; per-user agents and memory relocate leaks; 79.6–100% of runs fail (arXiv 2026, v2)
