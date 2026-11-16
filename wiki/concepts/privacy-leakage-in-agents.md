@@ -2,9 +2,9 @@
 type: concept
 title: "Privacy leakage in agents"
 tags: [agents, contextual-integrity, defenses]
-sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas]
+sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-09
-updated: 2026-11-15
+updated: 2026-11-16
 ---
 
 # Privacy leakage in agents
@@ -23,6 +23,7 @@ Leakage here is judged through [[contextual-integrity]]: the agent sees everythi
 - Measuring leakage needs care with refusals: an agent that refuses often looks private on raw leakage. AgentCIBench therefore conditions on engagement (`L_eng = L / (1 − R)`) ([[goel-2026-capable-but-careless]]).
 - [[goel-2026-privacy-collapse]] ([[privacy-collapse]]): benign fine-tuning can break contextual privacy. Fine-tuning on responses that use accessible context without asking cut PrivacyLens accuracy sharply (gpt-4o-mini 84.18 → 1.56), and empathetic or customer-support dialogue data cut it by roughly 17–24% relative, while safety and capability benchmarks barely moved. The effect can also be hidden behind a trigger string (§4.5).
 - [[gupta-2026-pisas]] ([[pisas|PiSAs]]): when a team shares one agentic system, information spills between teammates. With one agent serving everyone, mean appropriateness violations are 36.8%; giving each user an agent lowers this to 26.4% (centralized) or 19.0% (decentralized) but loses completeness, and 79.6–100% of runs still fail. What leaks is mostly task-adjacent: private details attached to needed facts (35.7%) and distractors (42.9%), against 0.2% for unrelated personal facts.
+- [[el-yagoubi-2026-agentleak]] ([[agentleak|AgentLeak]]): in a two-agent coordinator-worker system, final-output leakage is lower than with one agent (27.2% vs 43.2%), but fields the task does not need appear in 68.8% of traces' inter-agent messages and 46.7% of traces' shared memory; 41.7% of traces are clean at the output and leak internally. The rates are about the same with no attacker (messages: 69.3% benign). This measures internal over-sharing against a data-minimization rule, not disclosure to a person, and the paper's numbers are internally inconsistent in places: see [[internal-agent-flows-exposure-or-harm]].
 
 ## Settings: who shares the system
 
@@ -31,9 +32,9 @@ Leakage here is judged through [[contextual-integrity]]: the agent sees everythi
 | Single user | One | One | [[cimemories]], [[agentcibench]] |
 | Multi-user, shared system | A team | One, or one per user | [[pisas]] |
 | Independently owned agents | Many | One per user, each owned by its user | MAGPIE (not ingested) |
-| One user, many agents | One | Several | AgentLeak (not ingested) |
+| One deployment, several agents | Not defined by the paper | Coordinator and worker | [[agentleak]] |
 
-The first three rows follow [[gupta-2026-pisas]]; the last row is not yet backed by an ingested source.
+The first three rows follow [[gupta-2026-pisas]], which classes AgentLeak as single-user. [[el-yagoubi-2026-agentleak]] itself never defines users or agent owners; it describes an enterprise deployment.
 
 ## Failure modes
 
@@ -46,6 +47,8 @@ The first three rows follow [[gupta-2026-pisas]]; the last row is not yet backed
 Safety-tuned models in that study kept the last two low but still leaked under visual co-location.
 
 [[gupta-2026-pisas]] adds a multi-user distinction: an **appropriateness violation** (using something the task does not need) versus a **visibility violation** (information reaching a teammate who should not see it). The second can occur inside the system, in messages, agent context or memory, without appearing in any output.
+
+[[el-yagoubi-2026-agentleak]] adds a channel view: the same over-share can sit in the final output, inter-agent messages, tool inputs and outputs, shared memory, logs or artifacts, and output-only checks see just the first. Whether a flow between two agents of the same deployment is a violation at all is discussed in [[internal-agent-flows-exposure-or-harm]].
 
 > [!note] Side note: J-lens as a possible analysis tool
 > From a blog post, [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) (David Louapre, Hugging Face, 13 Jul 2026), which explains Anthropic's J-lens method. Read on 2026-11-15 from the page text; figures and the underlying Anthropic paper were not read. The post says nothing about privacy.
@@ -69,4 +72,5 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 ## Open questions
 
 - Does an agent that picks its own tools and context behave like the "helpful" fine-tuned models in [[goel-2026-privacy-collapse]]? Hamid's question 2 in `my-notes/questions.md`; see [[privacy-collapse#Open questions]].
+- When does an agent count as a recipient in the [[contextual-integrity]] sense, and how often does internal exposure become disclosure to a person? See [[internal-agent-flows-exposure-or-harm]].
 - Why do prompting defenses help here while [[mireshghallah-2025-cimemories|CIMemories]] reports a trade-off for memory? See [[prompt-defenses-for-contextual-privacy#Free lunch or trade-off]].

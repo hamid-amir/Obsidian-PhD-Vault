@@ -18,7 +18,7 @@ status: ingested
 url: https://arxiv.org/abs/2607.05318
 ingested: 2026-11-14
 created: 2026-11-12
-updated: 2026-11-14
+updated: 2026-11-16
 ---
 
 # PiSAs
@@ -51,7 +51,7 @@ Mapping from the discussion with Hamid (2026-11-12), checked against the v2 text
 - The paper classes ConfAIde, GoldCoin, CI-Bench, PrivaCI-Bench, PrivacyLens, CI-Work, CIMemories, PersistBench, AgentDAM and AgentLeak as single-user.
 - It classes MAGPIE, PAC-Bench, MuPPET, AgentSocialBench and HarnessAudit as multi-user, and says the others "assume agents are independently owned and hold partitioned user data".
 - Its Table 1 marks PiSAs as the only benchmark with all of: multi-user, accumulation, visibility, multi-agent, memory and action-based evaluation.
-- Not yet covered by the wiki: the one-user, many-agents setting (AgentLeak has not been ingested).
+- [[agentleak|AgentLeak]] is now ingested ([[el-yagoubi-2026-agentleak]]): it is multi-agent but never defines users or agent owners, which is consistent with the single-user class given here. Both benchmarks score inter-agent messages; see [[internal-agent-flows-exposure-or-harm]].
 
 ## Problem setting (§3)
 

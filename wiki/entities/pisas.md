@@ -42,5 +42,6 @@ A benchmark for [[contextual-integrity]] in multi-user agentic systems, where a 
 ## Related
 
 - [[cimemories]] (single user, persistent memory) and [[agentcibench]] (single user, computer use)
+- [[agentleak]] also scores inter-agent messages, within one deployment and against a data-minimization rule; see [[internal-agent-flows-exposure-or-harm]]
 - [[privacy-leakage-in-agents]]
 - Compared with the other benchmarks in [[benchmarks-at-a-glance]].

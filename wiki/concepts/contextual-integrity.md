@@ -2,9 +2,9 @@
 type: concept
 title: "Contextual Integrity"
 tags: [contextual-integrity]
-sources: [nissenbaum-2004-privacy-as-contextual-integrity, goel-2026-capable-but-careless, goel-2026-privacy-collapse, mireshghallah-2025-cimemories, gupta-2026-pisas]
+sources: [nissenbaum-2004-privacy-as-contextual-integrity, goel-2026-capable-but-careless, goel-2026-privacy-collapse, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-09
-updated: 2026-11-14
+updated: 2026-11-16
 ---
 
 # Contextual Integrity
@@ -41,6 +41,7 @@ Change any one of these and a flow can go from appropriate to inappropriate.
 - [[goel-2026-capable-but-careless|AgentCIBench]] turns CI into a per-scenario label: for a given recipient and task, a set of items that must be shared and a set that must not. A leak is any must-not-share item in the agent's action. Its three failure modes each perturb one flow parameter (attributes surfaced, transmission principle, recipient). The authors note these labels are scenario-specific judgments that may vary by culture or organization.
 - [[mireshghallah-2025-cimemories|CIMemories]] labels each (memory attribute, task + recipient) pair as share or withhold using GPT-5 under three Westin privacy personas, and scores only pairs where all personas agree. This handles disagreement about norms by discarding ambiguous flows.
 - [[gupta-2026-pisas|PiSAs]] gives every attribute two labels: task-contextual appropriateness (should it be used for this task?) and per-person visibility (which teammates may see it?). Visibility is labelled by three LLM privacy personas, and a human check agreed with 86.5% of appropriateness labels and 80.6% of visibility labels.
+- [[el-yagoubi-2026-agentleak|AgentLeak]] cites CI but operationalizes privacy as data minimization: a vault of sensitive fields and a small allowed set the task needs, labelled by two domain experts. The policy is per channel, not per recipient, and no sender, recipient or subject is defined. Its allowed set asks the same question as PiSAs' appropriateness label; it has nothing like the visibility label. See [[internal-agent-flows-exposure-or-harm]].
 - [[goel-2026-privacy-collapse]] measures CI behaviour before and after fine-tuning on PrivacyLens and CIMemories, and defines [[privacy-collapse]] as a rise in inappropriate flows with capability and safety unchanged.
 
 ## Related
