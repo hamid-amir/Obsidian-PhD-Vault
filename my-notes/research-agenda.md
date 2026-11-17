@@ -2,6 +2,8 @@
 My open questions, ideas and topics for the meetings. The research questions keep their numbers because wiki pages refer to them by number. All open questions from the wiki live here too: lines marked *Wiki:* add what the wiki knows, and the last section collects the wiki's own questions.
 
 teessssttt again
+shit man
+jnjhj
 ## For the next meeting
 
 1. **Timeline:** is there a schedule for the project, for example one month of literature review first?
