@@ -23,6 +23,9 @@ updated: 2026-11-17
 
 arXiv 2506.15674; EMNLP 2025 main (ACL Anthology `2025.emnlp-main.1347`). Same group as [[goel-2026-privacy-collapse]] (Gubri, Yun, Oh).
 
+>[!Abstract]
+>![[Pasted image 20261117130356.png]]
+
 ## What they did
 
 - **Question:** reasoning models used as personal agents are given the user's data. Do their reasoning traces leak it, even when the final answer does not?

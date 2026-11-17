@@ -1,4 +1,3 @@
-# Research agenda
 
 My open questions, ideas and topics for the meetings. The research questions keep their numbers because wiki pages refer to them by number. All open questions from the wiki live here too: lines marked *Wiki:* add what the wiki knows, and the last section collects the wiki's own questions.
 
@@ -37,6 +36,7 @@ Topics to discuss:
 	- *Wiki:* does training CI reasoning in, rather than prompting for it, change the prompt-defense picture? (Paper is a seed, not yet read.)
 	
 7. **Understanding direction: leaky thoughts.** [[green-2025-leaky-thoughts|Leaky Thoughts]] shows that LLMs leak private information in their reasoning traces. A starting point if we move toward understanding: why does this happen?
+	1. Move toward the benchmarks that also consider model's internal thinking (not just its outputs)
 
 ## Open questions from the wiki
 
