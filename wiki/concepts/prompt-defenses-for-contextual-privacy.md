@@ -2,9 +2,9 @@
 type: concept
 title: "Prompt defenses for contextual privacy"
 tags: [defenses, contextual-integrity, agents, llm-memory, open-question, contested]
-sources: [goel-2026-capable-but-careless, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak]
+sources: [goel-2026-capable-but-careless, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak, lan-2025-ci-reasoning-rl]
 created: 2026-11-09
-updated: 2026-11-16
+updated: 2026-11-17
 ---
 
 # Prompt defenses for contextual privacy
@@ -23,7 +23,7 @@ Instructions added to the system prompt that ask a model or agent to reason abou
 - **Memory ([[mireshghallah-2025-cimemories]], [[cimemories|CIMemories]]):** three prompts on GPT-5 only, results in a figure with no numbers in the text. The medium and high prompts ask for less ("Only include information that is necessary", "the ABSOLUTE MINIMUM set of attributes ... PRIORITIZING PRIVACY above all else"). They reduce violations ==at the cost of completeness==; the authors say conservative language "simply reduces overall verbosity" and conclude that "privacy-conscious prompting does not solve this".
 - **Multi-user systems ([[gupta-2026-pisas]], [[pisas|PiSAs]]):** a privacy instruction at three levels (None, Low, High) is the default defense, credited to CIMemories. Even at High, 79.6–100% of runs fail.
   - Non-prompt comparison (single agent): output filters (Privasis, PrivacyChecker) cut appropriateness violations from 24.8% to 6% but drop completeness from 97.0% to about 75–78%. A small CI-trained model (PrivacyAlign-Nemotron-4B) did worse than the generalist (76.2%).
-- **Multi-agent internal channels ([[el-yagoubi-2026-agentleak]], [[agentleak|AgentLeak]]):** on a benign subset, ==a privacy prompt cut final-output leakage from 48% to 19% but left leakage in inter-agent messages and shared memory almost unchanged (31% → 29%).== Role separation behaved the same way (22%, 28%).
+- **Multi-agent internal channels ([[el-yagoubi-2026-agentleak]], [[agentleak|AgentLeak]]):** on a benign subset, a privacy prompt cut final-output leakage from 48% to 19% but left leakage in inter-agent messages and shared memory almost unchanged (31% → 29%). Role separation behaved the same way (22%, 28%).
   - Output-side tools were stronger on the output and equally blind internally: output sanitizer 1% and 31%, LlamaGuard 6% and 30%, PromptGuard 8% and 29%.
   - Non-prompt comparison: a prototype that masks non-allowed fields in messages and memory writes cut internal leakage from 31.5% to 2.4%, with task success falling from 78.6% to 73.9%. It is given the ground-truth allowed set.
   - Limits: sample size not reported and no utility numbers for the prompt rows.
@@ -37,15 +37,16 @@ Instructions added to the system prompt that ask a model or agent to reason abou
 > - **Task scale:** CIMemories has about 7 to-share against about 84 not-to-share attributes per task, drawn from a 147-attribute memory; AgentCIBench scenarios are small single actions.
 > - **Evidence strength:** one model and a figure (CIMemories) against three models and a table (AgentCIBench).
 
-> [!note] Hamid's speculation (`my-notes/questions.md`, under question 1)
+> [!note] Hamid's speculation (`my-notes/research-agenda.md`, under question 1)
 > The CIMemories prompt "is not a defense at all": it just asks models to share less, whereas the AgentCIBench prompts explicitly encourage the model to consider CI parameters like the recipient.
 
 ## Open questions
 
 - Would recipient-aware prompts break the trade-off on CIMemories? Untested in either paper. See [[privacy-leakage-in-llm-memory]].
-- Do defense prompts still work on a model after fine-tuning (Hamid's question 3)? [[goel-2026-privacy-collapse]] did not test this; see [[privacy-collapse#Open questions]].
+- Do defense prompts still work on a model after fine-tuning (Hamid's question 3 in `my-notes/research-agenda.md`)? [[goel-2026-privacy-collapse]] did not test this; see [[privacy-collapse#Open questions]].
 - Can a prompt reach internal channels at all? In [[el-yagoubi-2026-agentleak]] the privacy prompt changed the output but not what agents passed to each other. Recipient-aware prompts were not tested there.
 - Do the gains survive end-to-end UI execution? AgentCIBench tested defenses only in the state-grounded setting.
+- Does training the CI reasoning in, rather than prompting for it, change the picture? [[lan-2025-ci-reasoning-rl]] (seed, not yet read) pairs a CI-reasoning prompt (CI-CoT) with RL post-training (CI-RL). Hamid lists it as the starting point for a mitigation direction (question 6 in `my-notes/research-agenda.md`).
 
 ## Related
 

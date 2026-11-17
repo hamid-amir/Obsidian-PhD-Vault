@@ -52,7 +52,7 @@ I think its a more interesting field and also has more space to innovate. Consid
 ### Candidate ideas (Claude's suggestions)
 
 1. **Collapse contagion:** put one privacy-collapsed or backdoored agent ([[goel-2026-privacy-collapse]] recipe) into a team of clean agents and measure whether leakage spreads, by topology and position.
-2. **Which prompt, on which surface:** share-less vs recipient-aware prompts, measured separately on final output, inter-agent messages and memory. Tests the speculation under question 1 in [[questions]].
+2. **Which prompt, on which surface:** share-less vs recipient-aware prompts, measured separately on final output, inter-agent messages and memory. Tests the speculation under question 1 in [[research-agenda]].
 3. **Context lost at handoff:** when agent A passes data to agent B, the norms it was shared under do not travel with it. Does attaching the source context to each message reduce downstream leaks? Closest prior work: Judging Before Propagation.
 
 Novelty is unchecked beyond four web searches.

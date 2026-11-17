@@ -4,7 +4,7 @@ title: "Privacy leakage in agents"
 tags: [agents, contextual-integrity, defenses]
 sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-09
-updated: 2026-11-16
+updated: 2026-11-17
 ---
 
 # Privacy leakage in agents
@@ -71,6 +71,6 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 
 ## Open questions
 
-- Does an agent that picks its own tools and context behave like the "helpful" fine-tuned models in [[goel-2026-privacy-collapse]]? Hamid's question 2 in `my-notes/questions.md`; see [[privacy-collapse#Open questions]].
+- Does an agent that picks its own tools and context behave like the "helpful" fine-tuned models in [[goel-2026-privacy-collapse]]? Hamid's question 2 in `my-notes/research-agenda.md`; see [[privacy-collapse#Open questions]].
 - When does an agent count as a recipient in the [[contextual-integrity]] sense, and how often does internal exposure become disclosure to a person? See [[internal-agent-flows-exposure-or-harm]].
 - Why do prompting defenses help here while [[mireshghallah-2025-cimemories|CIMemories]] reports a trade-off for memory? See [[prompt-defenses-for-contextual-privacy#Free lunch or trade-off]].

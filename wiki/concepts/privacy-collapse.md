@@ -2,9 +2,9 @@
 type: concept
 title: "Privacy collapse"
 tags: [fine-tuning, contextual-integrity, defenses]
-sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless]
+sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless, lan-2025-ci-reasoning-rl]
 created: 2026-11-12
-updated: 2026-11-16
+updated: 2026-11-17
 ---
 
 # Privacy collapse
@@ -40,8 +40,9 @@ Only one source covers this so far, so everything below is that paper's evidence
 ## Open questions
 
 - Is ungated collapse a separable "mode", or diffuse damage? The backdoor experiment in [[goel-2026-privacy-collapse]] §4.5 shows the behaviour can be gated, which does not by itself settle this.
-- Do prompt defenses ([[prompt-defenses-for-contextual-privacy]]) recover privacy in a collapsed model? Not tested in the source. Hamid raises this as question 3 in `my-notes/questions.md`.
-- Hamid's question 2 in `my-notes/questions.md`: is an agent that chooses its own tools and context (MCP access) in something like the paper's "helpful" mode?
+- Do prompt defenses ([[prompt-defenses-for-contextual-privacy]]) recover privacy in a collapsed model? Not tested in the source. Hamid raises this as question 3 in `my-notes/research-agenda.md`.
+- Hamid's question 2 in `my-notes/research-agenda.md`: is an agent that chooses its own tools and context (MCP access) in something like the paper's "helpful" mode?
+- Does privacy that was trained in survive later fine-tuning? [[lan-2025-ci-reasoning-rl]] (seed, not yet read) improves CI behaviour with RL post-training; whether that holds up under later "helpful" fine-tuning is Hamid's question 6 in `my-notes/research-agenda.md`.
 
 ## Related
 
