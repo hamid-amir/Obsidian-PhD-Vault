@@ -36,7 +36,7 @@ Topics to discuss:
 	- Does CI-RL survive later "helpful" fine-tuning, or does it collapse too? See [[privacy-collapse]].
 	- *Wiki:* does training CI reasoning in, rather than prompting for it, change the prompt-defense picture? (Paper is a seed, not yet read.)
 	
-7. **Understanding direction: leaky thoughts.** [arXiv 2506.15674](https://arxiv.org/abs/2506.15674) shows that LLMs leak private information in their reasoning traces. A starting point if we move toward understanding: why does this happen?
+7. **Understanding direction: leaky thoughts.** [[green-2025-leaky-thoughts|Leaky Thoughts]] shows that LLMs leak private information in their reasoning traces. A starting point if we move toward understanding: why does this happen?
 
 ## Open questions from the wiki
 

@@ -13,6 +13,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 - [[el-yagoubi-2026-agentleak]] — AgentLeak: two-agent systems leak less in the output (27.2%) but over-share in inter-agent messages (68.8%) and memory, attacker or not; output defenses miss it; minimization, not CI (arXiv 2026)
 - [[goel-2026-capable-but-careless]] — AgentCIBench: 15 computer-use agents leak without an attacker (mean 67.9%); capability ≠ carefulness; prompt defenses cut leakage ~35 pts (EMNLP 2026)
 - [[goel-2026-privacy-collapse]] — benign fine-tuning (helpful, empathetic, support data) breaks contextual privacy while safety/capability hold; can be backdoored; data filtering helps partly (ACL 2026)
+- [[green-2025-leaky-thoughts]] — reasoning models leak user data in their reasoning traces even when answers are careful; bigger reasoning budgets leak more (EMNLP 2025, seed)
 - [[gupta-2026-pisas]] — PiSAs: teams sharing one agent system spill info between teammates; per-user agents and memory relocate leaks; 79.6–100% of runs fail (arXiv 2026)
 - [[lan-2025-ci-reasoning-rl]] — CI-CoT reasoning prompt plus RL post-training (CI-RL) to teach models contextual integrity (NeurIPS 2025, seed)
 - [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)

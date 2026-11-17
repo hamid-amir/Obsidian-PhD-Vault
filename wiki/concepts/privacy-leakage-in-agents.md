@@ -71,4 +71,5 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 
 ## Related
 
+- [[green-2025-leaky-thoughts]] (seed): reasoning traces as another internal channel that leaks while the answer looks clean
 - [[research-agenda]] (open questions on this topic)
