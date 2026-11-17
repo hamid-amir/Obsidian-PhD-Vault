@@ -1,10 +1,10 @@
 ---
 type: synthesis
 title: "Internal agent flows: exposure or harm?"
-tags: [agents, contextual-integrity, open-question]
+tags: [agents, contextual-integrity]
 sources: [el-yagoubi-2026-agentleak, gupta-2026-pisas]
 created: 2026-11-16
-updated: 2026-11-16
+updated: 2026-11-17
 ---
 
 # Internal agent flows: exposure or harm?
@@ -45,14 +45,9 @@ AgentLeak's allowed set and PiSAs' appropriateness label ask the same question. 
 - **Disagree on the total.** AgentLeak says multi-agent raises total exposure; PiSAs says it lowers appropriateness violations (36.8% single → 19.0% decentralized). The baselines differ: a single agent in AgentLeak has no internal channels to leak on, while a single agent in PiSAs sees everything. Recorded, not resolved.
 - **Defenses:** AgentLeak's output-level defenses leave internal leakage at about 30%. PiSAs' output-filter result (6%) is single-agent only, so it does not test internal channels.
 
-## Open questions
-
-- **When is an agent a recipient in the CI sense?** A candidate answer from the discussion (Claude's suggestion): it depends on who the agent's principal is and where its context can flow next. Neither paper defines this.
-- **How often does internal exposure become disclosure?** AgentLeak measures the first of its three levels (policy violation) and "the conditions" for the second. Nobody in the wiki measures the conversion rate to an actual breach.
-- **Why do coordinators over-share?** The flat rates across threat levels suggest a delegation habit (passing the whole context). Untested inference.
-
 ## Related
 
+- [[research-agenda]] (open questions on this topic)
 - [[privacy-leakage-in-agents]]
 - [[privacy-leakage-in-llm-memory]]
 - [[prompt-defenses-for-contextual-privacy]]

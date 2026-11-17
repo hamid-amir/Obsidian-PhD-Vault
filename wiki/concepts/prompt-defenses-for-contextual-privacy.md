@@ -1,7 +1,7 @@
 ---
 type: concept
 title: "Prompt defenses for contextual privacy"
-tags: [defenses, contextual-integrity, agents, llm-memory, open-question, contested]
+tags: [defenses, contextual-integrity, agents, llm-memory, contested]
 sources: [goel-2026-capable-but-careless, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak, lan-2025-ci-reasoning-rl]
 created: 2026-11-09
 updated: 2026-11-17
@@ -40,16 +40,9 @@ Instructions added to the system prompt that ask a model or agent to reason abou
 > [!note] Hamid's speculation (`my-notes/research-agenda.md`, under question 1)
 > The CIMemories prompt "is not a defense at all": it just asks models to share less, whereas the AgentCIBench prompts explicitly encourage the model to consider CI parameters like the recipient.
 
-## Open questions
-
-- Would recipient-aware prompts break the trade-off on CIMemories? Untested in either paper. See [[privacy-leakage-in-llm-memory]].
-- Do defense prompts still work on a model after fine-tuning (Hamid's question 3 in `my-notes/research-agenda.md`)? [[goel-2026-privacy-collapse]] did not test this; see [[privacy-collapse#Open questions]].
-- Can a prompt reach internal channels at all? In [[el-yagoubi-2026-agentleak]] the privacy prompt changed the output but not what agents passed to each other. Recipient-aware prompts were not tested there.
-- Do the gains survive end-to-end UI execution? AgentCIBench tested defenses only in the state-grounded setting.
-- Does training the CI reasoning in, rather than prompting for it, change the picture? [[lan-2025-ci-reasoning-rl]] (seed, not yet read) pairs a CI-reasoning prompt (CI-CoT) with RL post-training (CI-RL). Hamid lists it as the starting point for a mitigation direction (question 6 in `my-notes/research-agenda.md`).
-
 ## Related
 
+- [[research-agenda]] (open questions on this topic)
 - [[privacy-leakage-in-llm-memory]]
 - [[privacy-leakage-in-agents]]
 - [[contextual-integrity]]

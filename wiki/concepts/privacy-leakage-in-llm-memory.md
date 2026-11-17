@@ -4,7 +4,7 @@ title: "Privacy leakage in LLM memory"
 tags: [llm-memory, contextual-integrity]
 sources: [mireshghallah-2025-cimemories, goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-09
-updated: 2026-11-16
+updated: 2026-11-17
 ---
 
 # Privacy leakage in LLM memory
@@ -31,13 +31,9 @@ updated: 2026-11-16
 > [!note]
 > [[goel-2026-capable-but-careless]] explicitly scopes long-term memory and multi-turn personalization out, so its finding that prompt defenses work does not directly speak to memory. Conversely, CIMemories tested only minimisation-style prompts, so it does not show that recipient-aware prompting fails for memory. See [[prompt-defenses-for-contextual-privacy]].
 
-## Open questions
-
-- Would recipient-aware prompts break the violation–completeness trade-off on CIMemories? Untested in either paper.
-- How much of the measured "accumulation" is behaviour and how much is the worst-case metric?
-
 ## Related
 
+- [[research-agenda]] (open questions on this topic)
 - [[cimemories]]
 - [[contextual-integrity]]
 - [[privacy-leakage-in-agents]]

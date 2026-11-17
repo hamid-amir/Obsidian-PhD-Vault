@@ -69,8 +69,6 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 > 4. **Monitoring internal channels.** Check each agent internally before it sends a message, as an alternative to output filters, which cost completeness in [[gupta-2026-pisas]]. Most speculative.
 > - **Limits for all four:** open weights only, and a fine-tuned model needs its own lens fit; single-word proxies for a norm that has no single token; a null result is hard to interpret because the lens covers under a tenth of the model's activity.
 
-## Open questions
+## Related
 
-- Does an agent that picks its own tools and context behave like the "helpful" fine-tuned models in [[goel-2026-privacy-collapse]]? Hamid's question 2 in `my-notes/research-agenda.md`; see [[privacy-collapse#Open questions]].
-- When does an agent count as a recipient in the [[contextual-integrity]] sense, and how often does internal exposure become disclosure to a person? See [[internal-agent-flows-exposure-or-harm]].
-- Why do prompting defenses help here while [[mireshghallah-2025-cimemories|CIMemories]] reports a trade-off for memory? See [[prompt-defenses-for-contextual-privacy#Free lunch or trade-off]].
+- [[research-agenda]] (open questions on this topic)

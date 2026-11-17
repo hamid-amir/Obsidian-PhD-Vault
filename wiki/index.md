@@ -36,4 +36,4 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 
 ## Synthesis
 
-- [[internal-agent-flows-exposure-or-harm]] — is an agent-to-agent flow a privacy violation? AgentLeak vs PiSAs; when internal exposure matters; open question on agents as CI recipients
+- [[internal-agent-flows-exposure-or-harm]] — is an agent-to-agent flow a privacy violation? AgentLeak vs PiSAs; when internal exposure matters

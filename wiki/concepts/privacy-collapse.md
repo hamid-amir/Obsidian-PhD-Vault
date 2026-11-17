@@ -37,14 +37,8 @@ Only one source covers this so far, so everything below is that paper's evidence
 > - **Relevance here:** consistent with filtering only halving the drop in [[goel-2026-privacy-collapse]]. It is a parallel, not a test: the setting is teacher distillation with topic-based filters, while the paper filters by an activation projection.
 > - **Untested experiment (Claude's suggestion):** the paper has paired helpful and control responses for the same prompts, so the highest-risk samples could be swapped to their control version and compared against dropping them. The paper's mixing table swaps a random fraction only.
 
-## Open questions
-
-- Is ungated collapse a separable "mode", or diffuse damage? The backdoor experiment in [[goel-2026-privacy-collapse]] §4.5 shows the behaviour can be gated, which does not by itself settle this.
-- Do prompt defenses ([[prompt-defenses-for-contextual-privacy]]) recover privacy in a collapsed model? Not tested in the source. Hamid raises this as question 3 in `my-notes/research-agenda.md`.
-- Hamid's question 2 in `my-notes/research-agenda.md`: is an agent that chooses its own tools and context (MCP access) in something like the paper's "helpful" mode?
-- Does privacy that was trained in survive later fine-tuning? [[lan-2025-ci-reasoning-rl]] (seed, not yet read) improves CI behaviour with RL post-training; whether that holds up under later "helpful" fine-tuning is Hamid's question 6 in `my-notes/research-agenda.md`.
-
 ## Related
 
+- [[research-agenda]] (open questions on this topic)
 - [[privacy-leakage-in-agents]]
 - [[privacy-leakage-in-llm-memory]]
