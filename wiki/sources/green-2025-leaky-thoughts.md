@@ -38,7 +38,7 @@ arXiv 2506.15674; EMNLP 2025 main (ACL Anthology `2025.emnlp-main.1347`). Same g
 
 - **Another internal channel.** Same pattern as [[el-yagoubi-2026-agentleak|AgentLeak]]: the output looks clean while an internal channel leaks, and output-side checks miss it. The reasoning trace could be treated as one more channel next to inter-agent messages and memory. See [[privacy-leakage-in-agents]].
 - **Reasoning as a defense cuts both ways.** [[lan-2025-ci-reasoning-rl]] and the AgentCIBench prompts ([[prompt-defenses-for-contextual-privacy]]) ask the model to reason about the flow before acting. This paper suggests that the reasoning itself may restate the private data, so a defense should be scored on the trace, not only on the answer.
-- **Starting point for "why does leakage happen".** Most leaks in the reasoning are simple recollection of the data, while leaks in the answer are mostly attributed to misunderstanding the context. That split is a concrete handle for the understanding direction (question 7 in [[research-agenda]]).
+- **Starting point for "why does leakage happen".** ==Most leaks in the reasoning are simple recollection of the data==, while leaks in the answer are ==mostly attributed to misunderstanding the context==. That split is a concrete handle for the understanding direction (question 7 in [[research-agenda]]).
 
 ## Where this fits
 
