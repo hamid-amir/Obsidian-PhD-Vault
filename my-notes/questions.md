@@ -6,3 +6,5 @@
 3. Test defense prompts on models after finetuning?
 
 4. Create a ==multi-task (sequential tasks)== multi-user privacy leakage benchmark?! CIMemories has many tasks but one user, and PiSAs has many users but one task.
+
+5. so agentleak showed that prompt based defenses (which are mainly output focused) decrease output leakage but have no effect on internal leakage between the agents. So maybe trying to ==find defenses that can actually decrease internal-channel leakage== would be a good thing to explore. Also trying to ==understand== why prompt based defenses has no effect on internal leakage?
