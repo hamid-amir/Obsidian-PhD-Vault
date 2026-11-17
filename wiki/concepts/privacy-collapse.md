@@ -40,5 +40,6 @@ Only one source covers this so far, so everything below is that paper's evidence
 ## Related
 
 - [[research-agenda]] (open questions on this topic)
+- [[reasoning-distillation-privacy-collapse]] (design note: does reasoning distillation cause collapse?)
 - [[privacy-leakage-in-agents]]
 - [[privacy-leakage-in-llm-memory]]

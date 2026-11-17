@@ -37,4 +37,5 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 
 ## Synthesis
 
+- [[reasoning-distillation-privacy-collapse]] — design note: is reasoning distillation benign fine-tuning that collapses privacy? content vs style, s1 natural experiment, four experiments
 - [[internal-agent-flows-exposure-or-harm]] — is an agent-to-agent flow a privacy violation? AgentLeak vs PiSAs; when internal exposure matters
