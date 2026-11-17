@@ -8,3 +8,7 @@
 4. Create a ==multi-task (sequential tasks)== multi-user privacy leakage benchmark?! CIMemories has many tasks but one user, and PiSAs has many users but one task.
 
 5. so agentleak showed that prompt based defenses (which are mainly output focused) decrease output leakage but have no effect on internal leakage between the agents. So maybe trying to ==find defenses that can actually decrease internal-channel leakage== would be a good thing to explore. Also trying to ==understand== why prompt based defenses has no effect on internal leakage?
+
+6. If moving toward mitigation, we can use the https://arxiv.org/pdf/2506.04245 paper where they introduced an RL framework that further enhances CI-aligned reasoning of LLMs, improving the ability of LLMs to reason about CI.
+
+7. If moving toward understanding, we can use the https://arxiv.org/abs/2506.15674 paper, where they showed LLMs have leaky thoughts during their reasoning traces.
