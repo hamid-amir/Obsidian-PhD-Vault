@@ -40,7 +40,6 @@ Topics to discuss:
 
 ## Open questions from the wiki
 
-Moved here from the wiki pages on 2026-11-17. These come from the papers' gaps or from discussions with Claude, not from me.
 
 **Prompt defenses** ([[prompt-defenses-for-contextual-privacy]])
 - Do the gains survive end-to-end UI execution? [[goel-2026-capable-but-careless|AgentCIBench]] tested defenses only in the state-grounded setting.
