@@ -37,6 +37,8 @@ Topics to discuss:
 	
 7. **Understanding direction: leaky thoughts.** [[green-2025-leaky-thoughts|Leaky Thoughts]] shows that LLMs leak private information in their reasoning traces. A starting point if we move toward understanding: why does this happen?
 	1. Move toward the benchmarks that also consider model's internal thinking (not just its outputs)
+	
+8. When moving from single agent to multi-agent setting, the output leakage decreases but internal leakage (inter-agent messagaes, shared memeory) emerge. Moreover, prompt defenses only decreases output leakage, not internal leakage.
 
 ## Ideas from the brainstorm with Claude (2026-11-17)
 
