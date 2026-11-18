@@ -6,7 +6,7 @@ Nov 18
 - matryoshka representation: reduce dimension.
 - multi agent communicatio chaneel is over. if access to shared embedding access and human can see, show same retrieval accuracy
 - general rag, agents can communicate throgh embedding dimensions
-- attack because of agents can use matrysjka  embedding dims to communicate
+- its an attack idea because of agents can use matrysjka  embedding dims to communicate
 
 
 - defense idea: John morris papers
