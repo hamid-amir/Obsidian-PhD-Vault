@@ -58,3 +58,7 @@ Operations:
 ## [2026-11-18] query | [[benchmarks-at-a-glance]] gains a plain-words summary at Hamid's request: one line per benchmark and three questions that tell them apart (who receives, what counts as a leak, where they look), built from the four benchmark entity pages. Table unchanged. MAGPIE not added (no page yet).
 
 ## [2026-11-18] query | At Hamid's request, the plain-words summary on [[benchmarks-at-a-glance]] moved into the table as four new columns (In plain words, Who receives, What counts as a leak, Where they look); the separate sections were removed and the shared-features line kept under the table. This departs from the SCHEMA rule to keep the table's current columns; SCHEMA not changed.
+
+## [2026-11-18] schema | At Hamid's request, SCHEMA.md benchmark-table rule now lists the twelve columns of benchmarks-at-a-glance.
+
+## [2026-11-18] query | At Hamid's request, his new question 8 in my-notes/research-agenda.md (multi-agent systems move leakage inside) rephrased and completed with evidence from AgentLeak and PiSAs and a suggested direction (need-to-know gate at handoff). Brainstorm ideas renumbered 8–11 → 9–12; references in [[reasoning-distillation-privacy-collapse]] updated.

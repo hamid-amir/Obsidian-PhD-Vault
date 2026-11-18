@@ -125,7 +125,7 @@ Generation is reproducible from markdown via `scripts/wiki_graph_extract.py`. Th
 - Ingest from Zotero: read the paper itself (arXiv URL or the PDF in Zotero, in chunks), plus Hamid's annotations in `raw/zotero/<citekey>.md` if present. Use the Better BibTeX citekey as the `zotero` field, and link the annotations file as `raw`. Do not copy the PDF into the vault.
 - Upgrading a `seed` page: re-read the full text, verify every claim and number already on the page, keep Hamid's takeaways (label them as his notes), then set `status: ingested` and `ingested: <date>`.
 - `Papers.base` (vault root) is an Obsidian Bases table over `wiki/sources/`. Keep source frontmatter keys consistent so it renders.
-- Benchmark table: whenever an ingest adds or changes a benchmark, add or update its row in `wiki/entities/benchmarks-at-a-glance.md`. Keep its current columns (no paper, models-tested or caveats columns) and keep each cell to one short phrase.
+- Benchmark table: whenever an ingest adds or changes a benchmark, add or update its row in `wiki/entities/benchmarks-at-a-glance.md`. Keep its twelve columns, in this order: Benchmark, In plain words, Who receives, What counts as a leak, Where they look, Setting, Scenario unit, Size, Labels, Metrics, Scoring, Headline result (no paper, models-tested or caveats columns). Keep each cell to one short phrase.
 - Always work from the latest version of a paper. Do not record version histories or differences between versions.
 
 ## User preferences

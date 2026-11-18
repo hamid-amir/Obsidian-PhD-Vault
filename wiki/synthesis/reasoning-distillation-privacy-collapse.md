@@ -4,12 +4,12 @@ title: "Design note: does reasoning distillation cause privacy collapse?"
 tags: [fine-tuning, contextual-integrity, defenses]
 sources: [goel-2026-privacy-collapse, green-2025-leaky-thoughts, lan-2025-ci-reasoning-rl]
 created: 2026-11-17
-updated: 2026-11-17
+updated: 2026-11-18
 ---
 
 # Design note: does reasoning distillation cause privacy collapse?
 
-Research idea from the brainstorm with Claude on 2026-11-17 (question 8 in [[research-agenda]]). A proposal, not a finding: novelty checked only by one quick web search, which found nothing beyond [[goel-2026-privacy-collapse]].
+Research idea from the brainstorm with Claude on 2026-11-17 (question 9 in [[research-agenda]]). A proposal, not a finding: novelty checked only by one quick web search, which found nothing beyond [[goel-2026-privacy-collapse]].
 
 ## Claim
 
@@ -43,7 +43,7 @@ If s1 is less private than its base model, style explains it, since content cann
    - the same traces with private data swapped for placeholders ("swap, don't drop", see the side note on [[privacy-collapse]])
    - answers without traces (control)
 4. **Fix.** Mix in traces that reason explicitly about CI (CI-CoT style, [[lan-2025-ci-reasoning-rl]]) and measure the privacy and reasoning cost.
-5. **Mechanism (optional).** Repeat the late-layer privacy-direction analysis of [[goel-2026-privacy-collapse]] on distilled models. Links to question 11 in [[research-agenda]].
+5. **Mechanism (optional).** Repeat the late-layer privacy-direction analysis of [[goel-2026-privacy-collapse]] on distilled models. Links to question 12 in [[research-agenda]].
 
 ## What would count as a result
 
@@ -54,7 +54,7 @@ If s1 is less private than its base model, style explains it, since content cann
 ## Risks
 
 - If the gap disappears with thinking off, this reduces to test-time leakage, already shown by Leaky Thoughts.
-- LLM judges are noisy and may miss paraphrased leaks (question 10 in [[research-agenda]]).
+- LLM judges are noisy and may miss paraphrased leaks (question 11 in [[research-agenda]]).
 - s1K is small, so effects may be small.
 - Compute: evaluate at 32B, train at 7–8B.
 
