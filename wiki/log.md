@@ -62,3 +62,5 @@ Operations:
 ## [2026-11-18] schema | At Hamid's request, SCHEMA.md benchmark-table rule now lists the twelve columns of benchmarks-at-a-glance.
 
 ## [2026-11-18] query | At Hamid's request, his new question 8 in my-notes/research-agenda.md (multi-agent systems move leakage inside) rephrased and completed with evidence from AgentLeak and PiSAs and a suggested direction (need-to-know gate at handoff). Brainstorm ideas renumbered 8–11 → 9–12; references in [[reasoning-distillation-privacy-collapse]] updated.
+
+## [2026-11-19] ingest | Detecting Multi-Agent Collusion Through Multi-Agent Interpretability, arXiv 2604.01151 — seed page [[rose-2026-multi-agent-collusion-detection]] created with verified metadata only (authors from the arXiv abstract page; no venue listed, latest version v5). Paper discussed with Hamid beforehand from model extractions of the v5 PDF text (figures and appendices D–R not read). Linked from privacy-leakage-in-agents (Related); index updated.
