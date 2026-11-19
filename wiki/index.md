@@ -19,6 +19,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 - [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)
 - [[rose-2026-multi-agent-collusion-detection]] — detects secret collusion between agents from their activations (per-agent probes fused into group tests); NARCBench (arXiv 2026, seed)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
+- [[westphal-2026-hide-and-seek-embedding]] — fine-tuned LLMs hide prompt secrets in outputs via embedding-hyperplane vocabulary buckets; probes on hidden states detect it (arXiv 2026, seed)
 
 ## Entities
 
