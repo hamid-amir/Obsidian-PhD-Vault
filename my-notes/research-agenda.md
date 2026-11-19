@@ -10,7 +10,7 @@ My open questions, ideas and topics for the meetings. The research questions kee
 Topics to discuss:
 
 - **Memory:** how do models decide what to save, and how can we make sure only appropriate information is saved?
-- **Multi-agent communication:** what are the failure modes? See [[multi-agent scenario#Failure modes]].
+- **Multi-agent communication:** what are the failure modes? See [[multi-agent literature#Failure modes]].
 
 ## Research questions and ideas
 

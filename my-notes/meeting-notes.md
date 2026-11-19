@@ -1,5 +1,5 @@
 
-Nov 18
+Nov 18, 2026
 
 
 - agentic setups collousin between agents (cowork with other agents without human notice, hidden communication, helps them achive their goal. communications can happen using images, texts, (signals, watermark)
