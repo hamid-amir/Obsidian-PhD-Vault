@@ -43,5 +43,6 @@ Only one source covers this so far, so everything below is that paper's evidence
 - [[reasoning-distillation-privacy-collapse]] (design note: does reasoning distillation cause collapse?)
 - [[privacy-leakage-in-agents]]
 - [[privacy-leakage-in-llm-memory]]
+- [[wang-2026-probing-steering-ci-norms]] (seed): models encode CI norms internally yet still leak; per-CI-parameter steering
 - [[activation-probing-and-steering]] (reading and steering internal directions, including the privacy vectors above)
 - [[westphal-2026-hide-and-seek-embedding]] (seed): deliberate counterpart, a model fine-tuned to leak prompt secrets covertly; detected with hidden-state probes

@@ -20,6 +20,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 - [[rose-2026-multi-agent-collusion-detection]] — detects secret collusion between agents from their activations (per-agent probes fused into group tests); NARCBench (arXiv 2026, seed)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
 - [[fischl-lanzoni-2026-breaking-bad]] — "task badness" direction from going-well/badly stories rises before reward hacks; steering against it cuts hacking in Qwen, inconsistent elsewhere (arXiv 2026, seed)
+- [[wang-2026-probing-steering-ci-norms]] — CI parameters as separable activation directions; models encode norms yet leak; per-parameter steering beats single-direction (arXiv 2026, seed)
 - [[westphal-2026-hide-and-seek-embedding]] — fine-tuned LLMs hide prompt secrets in outputs via embedding-hyperplane vocabulary buckets; probes on hidden states detect it (arXiv 2026, seed)
 
 ## Entities

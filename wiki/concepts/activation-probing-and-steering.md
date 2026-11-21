@@ -2,7 +2,7 @@
 type: concept
 title: "Activation probing and steering"
 tags: [interpretability]
-sources: [goel-2026-privacy-collapse, rose-2026-multi-agent-collusion-detection, westphal-2026-hide-and-seek-embedding, fischl-lanzoni-2026-breaking-bad]
+sources: [goel-2026-privacy-collapse, wang-2026-probing-steering-ci-norms, rose-2026-multi-agent-collusion-detection, westphal-2026-hide-and-seek-embedding, fischl-lanzoni-2026-breaking-bad]
 created: 2026-11-21
 updated: 2026-11-21
 ---
@@ -17,6 +17,7 @@ Only [[goel-2026-privacy-collapse]] is ingested; the other three sources are see
 ## Building a direction
 
 - **Difference of means on contrasting data.** Privacy and commonsense steering vectors in [[goel-2026-privacy-collapse]] (§5.2); a "task badness" direction from stories of tasks going well vs badly in [[fischl-lanzoni-2026-breaking-bad]] (seed).
+- **One direction per CI parameter.** Separate directions for information type, recipient and transmission principle, summed for steering, in [[wang-2026-probing-steering-ci-norms]] (seed).
 - **Trained linear probes.** Per-agent deception probes in [[rose-2026-multi-agent-collusion-detection]] (seed); probes on later-layer hidden states in [[westphal-2026-hide-and-seek-embedding]] (seed).
 
 ## Reading it
