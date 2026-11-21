@@ -24,6 +24,9 @@ updated: 2026-11-21
 
 Builds a "task badness" direction from model-written stories about everyday tasks going well vs badly (no hacking in the stories), reads it along coding-agent runs where it rises before reward hacks, and steers against it to cut hacking in Qwen3.6-27B; effects are weaker or inconsistent in GPT-OSS-20B and Gemma-4-31B. Strong steering makes the model misreport failing tests as passing. Not about privacy. arXiv 2611.14996 (cs.CL, cs.AI).
 
+> [!note] Terminology
+> "Reward hacking" here means agents tampering with the evaluation at inference time (editing tests, hardcoding answers, calling a honeypot), not a policy exploiting a reward signal during RL training. No RL is involved in the experiments.
+
 ## Where this fits
 
 - [[activation-probing-and-steering]]
