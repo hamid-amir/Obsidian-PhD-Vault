@@ -19,6 +19,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 - [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)
 - [[rose-2026-multi-agent-collusion-detection]] — detects secret collusion between agents from their activations (per-agent probes fused into group tests); NARCBench (arXiv 2026, seed)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
+- [[fischl-lanzoni-2026-breaking-bad]] — "task badness" direction from going-well/badly stories rises before reward hacks; steering against it cuts hacking in Qwen, inconsistent elsewhere (arXiv 2026, seed)
 - [[westphal-2026-hide-and-seek-embedding]] — fine-tuned LLMs hide prompt secrets in outputs via embedding-hyperplane vocabulary buckets; probes on hidden states detect it (arXiv 2026, seed)
 
 ## Entities
@@ -35,6 +36,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 - [[privacy-collapse]] — fine-tuning failure mode: more inappropriate disclosure, unchanged safety/capability; triggers, mechanism, mitigations
 - [[privacy-leakage-in-agents]] — agents leak by their own judgment; settings map (single-user, multi-user, multi-agent); failure modes; internal channels; fine-tuning can worsen it
 - [[prompt-defenses-for-contextual-privacy]] — system-prompt defenses: help agents at no utility cost (AgentCIBench) but trade completeness for privacy in memory (CIMemories); contested
+- [[activation-probing-and-steering]] — reading (probes) and writing (steering) internal directions; privacy vectors, collusion and stego probes, task-badness steering; cautions
 - [[privacy-leakage-in-llm-memory]] — models over-share stored memories; violations grow with samples and memory size; fine-tuning worsens it
 
 ## Synthesis

@@ -36,6 +36,7 @@ Keep this list small. Propose a new tag to Hamid before using it.
 - `fine-tuning` — effects of training or fine-tuning on privacy behavior.
 - `benchmark` — evaluation datasets and harnesses.
 - `defenses` — mitigations (prompting, training, system-level).
+- `interpretability` — reading or steering model internals (probes, activation directions).
 - `open-question` — pages or sections that flag unresolved questions.
 - `contested` — pages where sources contradict.
 - `stub` — page exists but has little content yet.

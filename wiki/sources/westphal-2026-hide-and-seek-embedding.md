@@ -11,7 +11,7 @@ year: 2026
 status: seed
 url: https://arxiv.org/abs/2601.22818
 created: 2026-11-19
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Hide and Seek in Embedding Space
@@ -23,5 +23,6 @@ Fine-tuned LLMs that covertly encode a secret from the prompt into fluent output
 
 ## Where this fits
 
+- [[activation-probing-and-steering]]
 - [[privacy-collapse]]
 - [[rose-2026-multi-agent-collusion-detection]]

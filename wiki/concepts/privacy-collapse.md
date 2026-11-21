@@ -4,7 +4,7 @@ title: "Privacy collapse"
 tags: [fine-tuning, contextual-integrity, defenses]
 sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless, lan-2025-ci-reasoning-rl]
 created: 2026-11-12
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Privacy collapse
@@ -43,4 +43,5 @@ Only one source covers this so far, so everything below is that paper's evidence
 - [[reasoning-distillation-privacy-collapse]] (design note: does reasoning distillation cause collapse?)
 - [[privacy-leakage-in-agents]]
 - [[privacy-leakage-in-llm-memory]]
+- [[activation-probing-and-steering]] (reading and steering internal directions, including the privacy vectors above)
 - [[westphal-2026-hide-and-seek-embedding]] (seed): deliberate counterpart, a model fine-tuned to leak prompt secrets covertly; detected with hidden-state probes

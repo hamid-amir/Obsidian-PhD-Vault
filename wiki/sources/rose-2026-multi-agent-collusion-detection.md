@@ -14,7 +14,7 @@ year: 2026
 status: seed
 url: https://arxiv.org/abs/2604.01151
 created: 2026-11-19
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Detecting Multi-Agent Collusion Through Multi-Agent Interpretability
@@ -26,5 +26,6 @@ Detects secret collusion between LLM agents from their internal activations rath
 
 ## Where this fits
 
+- [[activation-probing-and-steering]]
 - [[privacy-leakage-in-agents]]
 - [[internal-agent-flows-exposure-or-harm]]

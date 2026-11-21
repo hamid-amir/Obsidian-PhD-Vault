@@ -4,7 +4,7 @@ title: "Privacy leakage in agents"
 tags: [agents, contextual-integrity, defenses]
 sources: [goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-09
-updated: 2026-11-19
+updated: 2026-11-21
 ---
 
 # Privacy leakage in agents
@@ -72,5 +72,6 @@ Safety-tuned models in that study kept the last two low but still leaked under v
 ## Related
 
 - [[green-2025-leaky-thoughts]] (seed): reasoning traces as another internal channel that leaks while the answer looks clean
+- [[activation-probing-and-steering]]: reading and steering internal directions, across the wiki's sources
 - [[rose-2026-multi-agent-collusion-detection]] (seed): monitoring agents' internal activations, not transcripts, to catch hidden coordination between agents
 - [[research-agenda]] (open questions on this topic)
