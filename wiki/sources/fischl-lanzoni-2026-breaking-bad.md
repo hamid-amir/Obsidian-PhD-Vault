@@ -1,7 +1,9 @@
 ---
 type: source
-title: "Breaking Bad: \"Going Badly\" Activations Drive Reward Hacking"
-tags: [interpretability, agents]
+title: 'Breaking Bad: "Going Badly" Activations Drive Reward Hacking'
+tags:
+  - interpretability
+  - agents
 authors:
   - Natalia Fischl-Lanzoni
   - Punya Syon Pandey
