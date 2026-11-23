@@ -2,9 +2,9 @@
 type: concept
 title: "Privacy collapse"
 tags: [fine-tuning, contextual-integrity, defenses]
-sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless, lan-2025-ci-reasoning-rl]
+sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless, lan-2025-ci-reasoning-rl, wang-2026-probing-steering-ci-norms]
 created: 2026-11-12
-updated: 2026-11-21
+updated: 2026-11-23
 ---
 
 # Privacy collapse
@@ -28,6 +28,7 @@ Only one source covers this so far, so everything below is that paper's evidence
 ## Proposed mechanism and mitigations
 
 - On Llama-3-8B, late-layer privacy representations change after fine-tuning while commonsense ones do not.
+- Contrast: in base instruction-tuned models (no fine-tuning), [[wang-2026-probing-steering-ci-norms]] finds CI norms still linearly readable while behaviour leaks. Different conditions and directions, so not a direct contradiction; see [[does-the-model-know-the-norm]].
 - Filtering the 10% of training samples that score lowest on a privacy projection roughly halves the drop on EmpatheticDialogues for two models; mixing control data into helpful data helps only partly (50% helpful still gives −65.0 on gpt-4o-mini).
 - In-context demonstrations (32–256) did not cause collapse, so the paper treats it as a parameter-level change.
 
@@ -43,6 +44,6 @@ Only one source covers this so far, so everything below is that paper's evidence
 - [[reasoning-distillation-privacy-collapse]] (design note: does reasoning distillation cause collapse?)
 - [[privacy-leakage-in-agents]]
 - [[privacy-leakage-in-llm-memory]]
-- [[wang-2026-probing-steering-ci-norms]] (seed): models encode CI norms internally yet still leak; per-CI-parameter steering
+- [[wang-2026-probing-steering-ci-norms]]: models encode CI norms internally yet still leak; per-CI-parameter steering
 - [[activation-probing-and-steering]] (reading and steering internal directions, including the privacy vectors above)
 - [[westphal-2026-hide-and-seek-embedding]] (seed): deliberate counterpart, a model fine-tuned to leak prompt secrets covertly; detected with hidden-state probes

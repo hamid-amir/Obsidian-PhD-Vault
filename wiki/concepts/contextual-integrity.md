@@ -2,9 +2,9 @@
 type: concept
 title: "Contextual Integrity"
 tags: [contextual-integrity]
-sources: [nissenbaum-2004-privacy-as-contextual-integrity, goel-2026-capable-but-careless, goel-2026-privacy-collapse, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak]
+sources: [nissenbaum-2004-privacy-as-contextual-integrity, goel-2026-capable-but-careless, goel-2026-privacy-collapse, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak, wang-2026-probing-steering-ci-norms]
 created: 2026-11-09
-updated: 2026-11-16
+updated: 2026-11-23
 ---
 
 # Contextual Integrity
@@ -43,6 +43,7 @@ Change any one of these and a flow can go from appropriate to inappropriate.
 - [[gupta-2026-pisas|PiSAs]] gives every attribute two labels: task-contextual appropriateness (should it be used for this task?) and per-person visibility (which teammates may see it?). Visibility is labelled by three LLM privacy personas, and a human check agreed with 86.5% of appropriateness labels and 80.6% of visibility labels.
 - [[el-yagoubi-2026-agentleak|AgentLeak]] cites CI but operationalizes privacy as data minimization: a vault of sensitive fields and a small allowed set the task needs, labelled by two domain experts. The policy is per channel, not per recipient, and no sender, recipient or subject is defined. Its allowed set asks the same question as PiSAs' appropriateness label; it has nothing like the visibility label. See [[internal-agent-flows-exposure-or-harm]].
 - [[goel-2026-privacy-collapse]] measures CI behaviour before and after fine-tuning on PrivacyLens and CIMemories, and defines [[privacy-collapse]] as a rise in inappropriate flows with capability and safety unchanged.
+- [[wang-2026-probing-steering-ci-norms]] uses the flow parameters inside the model: synthetic examples that vary one parameter at a time (information type, recipient, transmission principle) yield separable activation directions, and steering along all three together cuts leakage, though at a large utility cost. Adding subject and sender as further axes did worse. See [[activation-probing-and-steering]].
 
 ## Related
 

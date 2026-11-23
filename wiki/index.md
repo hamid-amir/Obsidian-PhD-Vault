@@ -20,7 +20,7 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 - [[rose-2026-multi-agent-collusion-detection]] — detects secret collusion between agents from their activations (per-agent probes fused into group tests); NARCBench (arXiv 2026, seed)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
 - [[fischl-lanzoni-2026-breaking-bad]] — "task badness" direction from going-well/badly stories rises before reward hacks; steering against it cuts hacking in Qwen, inconsistent elsewhere (arXiv 2026, seed)
-- [[wang-2026-probing-steering-ci-norms]] — CI parameters as separable activation directions; models encode norms yet leak; per-parameter steering beats single-direction (arXiv 2026, seed)
+- [[wang-2026-probing-steering-ci-norms]] — CI norms linearly readable yet models leak ("awareness gap"); summed per-CI-parameter steering cuts leakage to ~0% but utility drops to 1/5 (arXiv 2026)
 - [[westphal-2026-hide-and-seek-embedding]] — fine-tuned LLMs hide prompt secrets in outputs via embedding-hyperplane vocabulary buckets; probes on hidden states detect it (arXiv 2026, seed)
 
 ## Entities
@@ -43,4 +43,5 @@ When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wik
 ## Synthesis
 
 - [[reasoning-distillation-privacy-collapse]] — design note: is reasoning distillation benign fine-tuning that collapses privacy? content vs style, s1 natural experiment, four experiments
+- [[does-the-model-know-the-norm]] — critical reading of the privacy awareness gap and CI-parametric steering; what a fair steering comparison needs; contrast with privacy collapse
 - [[internal-agent-flows-exposure-or-harm]] — is an agent-to-agent flow a privacy violation? AgentLeak vs PiSAs; when internal exposure matters
