@@ -12,3 +12,7 @@ views:
       - year
       - status
       - citations
+    columnSize:
+      file.name: 282
+      note.title: 769
+      note.venue: 79
