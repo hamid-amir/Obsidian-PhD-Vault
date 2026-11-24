@@ -15,6 +15,8 @@ venue: NeurIPS
 year: 2025
 status: seed
 url: https://arxiv.org/abs/2506.04245
+citations: 63
+citations_updated: 2026-11-24
 created: 2026-11-17
 updated: 2026-11-17
 ---

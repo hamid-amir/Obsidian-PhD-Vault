@@ -13,6 +13,8 @@ venue: arXiv
 year: 2026
 status: seed
 url: https://arxiv.org/abs/2604.01151
+citations: 14
+citations_updated: 2026-11-24
 created: 2026-11-19
 updated: 2026-11-21
 ---

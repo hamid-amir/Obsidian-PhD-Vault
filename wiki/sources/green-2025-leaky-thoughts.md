@@ -12,6 +12,8 @@ venue: EMNLP
 year: 2025
 status: seed
 url: https://arxiv.org/abs/2506.15674
+citations: 48
+citations_updated: 2026-11-24
 created: 2026-11-17
 updated: 2026-11-17
 ---

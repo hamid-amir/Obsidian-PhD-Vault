@@ -11,3 +11,4 @@ views:
       - venue
       - year
       - status
+      - citations

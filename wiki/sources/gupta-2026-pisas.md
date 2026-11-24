@@ -16,6 +16,8 @@ venue: arXiv
 year: 2026
 status: ingested
 url: https://arxiv.org/abs/2607.05318
+citations: 6
+citations_updated: 2026-11-24
 ingested: 2026-11-14
 created: 2026-11-12
 updated: 2026-11-16

@@ -33,6 +33,7 @@ Use the **`llm-wiki`** skill for every wiki operation. Read `wiki/SCHEMA.md` bef
 - **Query:** read `wiki/index.md` first, open only the relevant pages, answer with `[[wikilink]]` citations. If the wiki lacks coverage, say so; don't answer from training data as if it came from the wiki. Offer to file good answers into `wiki/synthesis/`.
 - **Ingest:** a source page in `wiki/sources/`, surgical updates to the concept/entity pages it touches, new pages linked from existing ones (no orphans), a line in `index.md` and an entry in `log.md`.
 - **Lint:** run the skill's `wiki_lint.py` on `wiki/` and present findings as proposals. Don't apply them silently.
+- **Citation counts (monthly):** every source page carries `citations` and `citations_updated`. At the start of a session, if any `citations_updated` is more than 30 days old (or a source page with a `url` lacks it), offer to refresh. Refresh = one POST to the Semantic Scholar batch endpoint `https://api.semanticscholar.org/graph/v1/paper/batch?fields=title,citationCount` with ids like `arXiv:2601.15220`; check each returned title matches the page, then set `citations` and `citations_updated` (don't touch `updated`). New source pages get both fields when created. Log the refresh in `log.md`. Pages without an arXiv/DOI ID (e.g. Nissenbaum 2004) are left without the fields.
 
 ## Rules
 

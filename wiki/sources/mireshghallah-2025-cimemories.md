@@ -14,6 +14,8 @@ venue: arXiv
 year: 2025
 status: ingested
 url: https://arxiv.org/abs/2511.14937
+citations: 30
+citations_updated: 2026-11-24
 ingested: 2026-11-12
 created: 2026-11-12
 updated: 2026-11-16

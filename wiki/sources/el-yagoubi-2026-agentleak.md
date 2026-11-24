@@ -10,6 +10,8 @@ venue: arXiv
 year: 2026
 status: ingested
 url: https://arxiv.org/abs/2602.11510
+citations: 43
+citations_updated: 2026-11-24
 ingested: 2026-11-16
 created: 2026-11-16
 updated: 2026-11-16

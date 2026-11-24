@@ -12,6 +12,8 @@ venue: ACL
 year: 2026
 status: ingested
 url: https://arxiv.org/abs/2601.15220
+citations: 8
+citations_updated: 2026-11-24
 ingested: 2026-11-12
 created: 2026-11-09
 updated: 2026-11-16

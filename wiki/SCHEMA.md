@@ -56,7 +56,7 @@ Every page must have:
 - `updated`
 
 Plus type-specific:
-- `source` pages: `authors` (full list), `venue` (plain text, not a link), `year` (number), `status`, plus `url`, `zotero` (Better BibTeX citekey or `zotero://` link) and `ingested` (date) once ingested. `raw` only when the source lives in `raw/`.
+- `source` pages: `authors` (full list), `venue` (plain text, not a link), `year` (number), `status`, plus `url`, `zotero` (Better BibTeX citekey or `zotero://` link) and `ingested` (date) once ingested. `raw` only when the source lives in `raw/`. Also `citations` (number, Semantic Scholar `citationCount`) and `citations_updated` (date fetched), placed after `url`; leave both out when the paper can't be matched by ID. Refreshing them does not change `updated`.
 - Non-source pages: `sources` listing the source-summary pages drawn from (bare slugs).
 
 Source `status` values:
@@ -142,6 +142,7 @@ Generation is reproducible from markdown via `scripts/wiki_graph_extract.py`. Th
 - Structural lint: after every 5 ingests.
 - Semantic lint: weekly or after every 20 ingests.
 - Gap-finding: monthly.
+- Citation refresh: monthly (see CLAUDE.md).
 - Graph lint + extract: after every ingest that adds typed `graph.relationships`.
 
 Adjust based on the wiki's growth rate.
