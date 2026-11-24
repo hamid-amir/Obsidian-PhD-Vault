@@ -12,6 +12,9 @@ views:
       - year
       - status
       - citations
+    sort:
+      - property: year
+        direction: ASC
     columnSize:
       file.name: 282
       note.title: 769
