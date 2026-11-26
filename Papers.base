@@ -17,6 +17,10 @@ views:
     sort:
       - property: year
         direction: ASC
+      - property: area
+        direction: DESC
+      - property: citations
+        direction: ASC
     columnSize:
       file.name: 282
       note.title: 589
