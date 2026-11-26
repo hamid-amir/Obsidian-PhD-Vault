@@ -2,6 +2,7 @@
 type: source
 title: "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers"
 tags: [contextual-integrity, agents, defenses]
+area: [privacy-safety]
 authors:
   - Tommaso Green
   - Martin Gubri

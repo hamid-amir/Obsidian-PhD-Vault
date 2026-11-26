@@ -15,6 +15,15 @@ Paths are relative to the vault root (the Obsidian vault is the project root).
 - Asset/image storage: `raw/assets/`
 - Human layer: `my-notes/` is written by Hamid only. Read it for context and link to it, but never edit, move or rewrite it.
 
+## Research areas
+
+The wiki covers two research areas. Every page declares which one(s) it belongs to in an `area` list:
+
+- `privacy-safety` — contextual privacy, CI, privacy leakage in agents and memory, fine-tuning effects, and related safety work (reward hacking, steganography, collusion detection).
+- `agent-communication` — information flow inside agent systems: memory across time, latent communication between models, delegation between orchestrator and workers (see `my-notes/information-flow thesis.md`).
+
+A page relevant to both lists both (e.g. AgentLeak, PiSAs, CIMemories). Areas are a property, not folders: pages stay in the type folders below, so links never break when a page joins a second area. `index.md` groups pages by area, and `Papers.base` has one view per area plus All papers. Ask Hamid before adding a third area.
+
 ## Page types
 
 This wiki uses these page types, each with a dedicated subdirectory:
@@ -28,7 +37,7 @@ Add additional types here as the wiki evolves.
 
 ## Tag taxonomy
 
-Keep this list small. Propose a new tag to Hamid before using it.
+Keep this list small. Propose a new tag to Hamid before using it. Tags describe topics and cut across areas; the research area goes in `area`, not in tags.
 
 - `contextual-integrity` — CI theory and work that applies it.
 - `agents` — LLM agents, including computer-use agents.
@@ -52,6 +61,7 @@ Every page must have:
 - `type`
 - `title`
 - `tags`
+- `area` (list: `privacy-safety`, `agent-communication`, or both)
 - `created`
 - `updated`
 
@@ -97,7 +107,7 @@ Required fields on every relationship: `predicate`, `object`, `source`, `evidenc
 
 (Update this section when sharding.)
 
-Currently flat: a single `wiki/index.md` listing all pages.
+A single `wiki/index.md`, grouped by research area (Privacy & safety, Shared by both areas, Agent communication) and then by page type. A page in both areas is listed once, under Shared.
 
 When the wiki passes ~150 pages or `index.md` exceeds 300 lines, shard into `wiki/indexes/<type>.md` and update this section.
 
@@ -133,7 +143,7 @@ Generation is reproducible from markdown via `scripts/wiki_graph_extract.py`. Th
 
 - Use Obsidian callouts (`> [!note]`, `> [!caution]`, …) and `==highlights==`. Never use HTML tags such as `<font color>`.
 - Hamid's own takeaways are worth keeping verbatim; mark them as his notes rather than rewriting them in wiki voice.
-- Keep pages short and focused on what matters for Hamid's research (contextual privacy). Cover the rest of a paper in a line or leave it out.
+- Keep pages short and focused on what matters for Hamid's research in the page's area(s). Cover the rest of a paper in a line or leave it out.
 - No sections, callouts or caveat lines about internal inconsistencies in a paper (numbers or statements that disagree within the same paper). A short section on the paper's gaps and limitations is welcome. Contradictions between different sources are still recorded.
 - No notes in wiki pages about how a paper was read (what was or was not read, extraction method, missing Zotero annotations). Put that in the `log.md` entry for the ingest instead.
 

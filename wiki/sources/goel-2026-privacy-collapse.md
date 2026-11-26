@@ -2,6 +2,7 @@
 type: source
 title: "Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models"
 tags: [fine-tuning, contextual-integrity, llm-memory, agents, defenses]
+area: [privacy-safety]
 authors:
   - Anmol Goel
   - Cornelius Emde

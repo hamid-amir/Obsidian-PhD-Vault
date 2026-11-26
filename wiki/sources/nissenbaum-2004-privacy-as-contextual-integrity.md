@@ -2,6 +2,7 @@
 type: source
 title: "Privacy as Contextual Integrity"
 tags: [contextual-integrity]
+area: [privacy-safety]
 authors: [Helen Nissenbaum]
 venue: Washington Law Review
 year: 2004

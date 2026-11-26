@@ -2,6 +2,7 @@
 type: source
 title: "AgentLeak: A Benchmark for Internal-Channel Privacy Leakage in Multi-Agent LLM Systems"
 tags: [agents, benchmark, defenses, llm-memory]
+area: [privacy-safety, agent-communication]
 authors:
   - Faouzi El Yagoubi
   - Godwin Badu-Marfo

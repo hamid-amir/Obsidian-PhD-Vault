@@ -2,6 +2,7 @@
 type: synthesis
 title: "Does the model know the norm? Probing, the awareness gap and steering repair"
 tags: [contextual-integrity, interpretability, defenses]
+area: [privacy-safety]
 sources: [wang-2026-probing-steering-ci-norms, goel-2026-privacy-collapse, fischl-lanzoni-2026-breaking-bad]
 created: 2026-11-23
 updated: 2026-11-23

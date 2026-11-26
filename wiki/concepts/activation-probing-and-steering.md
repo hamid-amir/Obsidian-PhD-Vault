@@ -2,6 +2,7 @@
 type: concept
 title: "Activation probing and steering"
 tags: [interpretability]
+area: [privacy-safety, agent-communication]
 sources: [goel-2026-privacy-collapse, wang-2026-probing-steering-ci-norms, rose-2026-multi-agent-collusion-detection, westphal-2026-hide-and-seek-embedding, fischl-lanzoni-2026-breaking-bad]
 created: 2026-11-21
 updated: 2026-11-23

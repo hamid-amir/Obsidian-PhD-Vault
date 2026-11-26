@@ -2,6 +2,7 @@
 type: source
 title: "Detecting Multi-Agent Collusion Through Multi-Agent Interpretability"
 tags: [agents]
+area: [privacy-safety, agent-communication]
 authors:
   - Aaron Rose
   - Carissa Cullen

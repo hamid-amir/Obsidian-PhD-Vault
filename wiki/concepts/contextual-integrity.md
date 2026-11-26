@@ -2,6 +2,7 @@
 type: concept
 title: "Contextual Integrity"
 tags: [contextual-integrity]
+area: [privacy-safety]
 sources: [nissenbaum-2004-privacy-as-contextual-integrity, goel-2026-capable-but-careless, goel-2026-privacy-collapse, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak, wang-2026-probing-steering-ci-norms]
 created: 2026-11-09
 updated: 2026-11-23

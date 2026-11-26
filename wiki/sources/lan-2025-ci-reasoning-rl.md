@@ -2,6 +2,7 @@
 type: source
 title: "Contextual Integrity in LLMs via Reasoning and Reinforcement Learning"
 tags: [contextual-integrity, defenses, fine-tuning]
+area: [privacy-safety]
 authors:
   - Guangchen Lan
   - Huseyin A. Inan

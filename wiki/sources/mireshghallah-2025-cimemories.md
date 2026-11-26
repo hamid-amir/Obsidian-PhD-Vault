@@ -2,6 +2,7 @@
 type: source
 title: "CIMemories: A Compositional Benchmark for Contextual Integrity of Persistent Memory in LLMs"
 tags: [llm-memory, benchmark, contextual-integrity, defenses]
+area: [privacy-safety, agent-communication]
 authors:
   - Niloofar Mireshghallah
   - Neal Mangaokar

@@ -3,6 +3,7 @@ type: entity
 kind: benchmark
 title: "CIMemories"
 tags: [benchmark, llm-memory, contextual-integrity]
+area: [privacy-safety, agent-communication]
 sources: [mireshghallah-2025-cimemories, goel-2026-privacy-collapse, goel-2026-capable-but-careless, gupta-2026-pisas]
 created: 2026-11-12
 updated: 2026-11-16

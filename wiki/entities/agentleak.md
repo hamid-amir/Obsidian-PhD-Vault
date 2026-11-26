@@ -3,6 +3,7 @@ type: entity
 kind: benchmark
 title: "AgentLeak"
 tags: [benchmark, agents, llm-memory]
+area: [privacy-safety, agent-communication]
 sources: [el-yagoubi-2026-agentleak, gupta-2026-pisas]
 created: 2026-11-16
 updated: 2026-11-16

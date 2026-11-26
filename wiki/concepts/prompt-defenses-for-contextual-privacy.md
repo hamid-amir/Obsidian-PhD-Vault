@@ -2,6 +2,7 @@
 type: concept
 title: "Prompt defenses for contextual privacy"
 tags: [defenses, contextual-integrity, agents, llm-memory, contested]
+area: [privacy-safety]
 sources: [goel-2026-capable-but-careless, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak, lan-2025-ci-reasoning-rl]
 created: 2026-11-09
 updated: 2026-11-17

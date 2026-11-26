@@ -3,6 +3,7 @@ type: entity
 kind: benchmark
 title: "PiSAs"
 tags: [benchmark, agents, contextual-integrity, llm-memory]
+area: [privacy-safety, agent-communication]
 sources: [gupta-2026-pisas]
 created: 2026-11-14
 updated: 2026-11-16

@@ -6,6 +6,7 @@ tags:
   - benchmark
   - defenses
   - contextual-integrity
+area: [privacy-safety]
 authors:
   - Anmol Goel
   - Iryna Gurevych

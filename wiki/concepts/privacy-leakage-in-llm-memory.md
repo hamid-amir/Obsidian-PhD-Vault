@@ -2,6 +2,7 @@
 type: concept
 title: "Privacy leakage in LLM memory"
 tags: [llm-memory, contextual-integrity]
+area: [privacy-safety, agent-communication]
 sources: [mireshghallah-2025-cimemories, goel-2026-capable-but-careless, goel-2026-privacy-collapse, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-09
 updated: 2026-11-17

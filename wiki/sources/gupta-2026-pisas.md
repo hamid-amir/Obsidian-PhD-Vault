@@ -2,6 +2,7 @@
 type: source
 title: "PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems"
 tags: [agents, benchmark, contextual-integrity, llm-memory, defenses]
+area: [privacy-safety, agent-communication]
 authors:
   - Shubham Gupta
   - Nazanin Mohammadi Sepahvand

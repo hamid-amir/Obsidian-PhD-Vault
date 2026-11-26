@@ -2,6 +2,7 @@
 type: concept
 title: "Privacy collapse"
 tags: [fine-tuning, contextual-integrity, defenses]
+area: [privacy-safety]
 sources: [goel-2026-privacy-collapse, goel-2026-capable-but-careless, lan-2025-ci-reasoning-rl, wang-2026-probing-steering-ci-norms]
 created: 2026-11-12
 updated: 2026-11-23

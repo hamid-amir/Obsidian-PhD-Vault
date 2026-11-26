@@ -2,6 +2,7 @@
 type: source
 title: "Hide and Seek in Embedding Space: Geometry-based Steganography and Detection in Large Language Models"
 tags: [fine-tuning, defenses]
+area: [privacy-safety]
 authors:
   - Charles Westphal
   - Keivan Navaie

@@ -1,6 +1,52 @@
 views:
   - type: table
-    name: Papers
+    name: Papers – Privacy & safety
+    filters:
+      and:
+        - file.folder == "wiki/sources"
+        - area.contains("privacy-safety")
+    order:
+      - file.name
+      - title
+      - authors
+      - venue
+      - year
+      - status
+      - area
+      - citations
+    sort:
+      - property: year
+        direction: ASC
+    columnSize:
+      file.name: 282
+      note.title: 589
+      note.authors: 175
+      note.venue: 79
+  - type: table
+    name: Papers – Agent communication
+    filters:
+      and:
+        - file.folder == "wiki/sources"
+        - area.contains("agent-communication")
+    order:
+      - file.name
+      - title
+      - authors
+      - venue
+      - year
+      - status
+      - area
+      - citations
+    sort:
+      - property: year
+        direction: ASC
+    columnSize:
+      file.name: 282
+      note.title: 589
+      note.authors: 175
+      note.venue: 79
+  - type: table
+    name: All papers
     filters:
       and:
         - file.folder == "wiki/sources"
@@ -11,6 +57,7 @@ views:
       - venue
       - year
       - status
+      - area
       - citations
     sort:
       - property: year

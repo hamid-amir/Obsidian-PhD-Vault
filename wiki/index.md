@@ -6,42 +6,56 @@ Keep summaries tight — one line each. The index is engineered to be cheap to r
 
 When this file exceeds ~300 lines or the wiki passes ~150 pages, shard into `wiki/indexes/<type>.md` and replace this file with a directory of shards. See the `scaling-playbook.md` reference in the `llm-wiki` skill for the migration procedure.
 
+Pages are grouped by research area, from each page's `area` frontmatter (see SCHEMA.md). A page in both areas is listed once, under **Shared by both areas**.
+
 ---
 
-## Sources
+# Privacy & safety
 
-- [[el-yagoubi-2026-agentleak]] — AgentLeak: two-agent systems leak less in the output (27.2%) but over-share in inter-agent messages (68.8%) and memory, attacker or not; output defenses miss it; minimization, not CI (arXiv 2026)
+## Sources
 - [[goel-2026-capable-but-careless]] — AgentCIBench: 15 computer-use agents leak without an attacker (mean 67.9%); capability ≠ carefulness; prompt defenses cut leakage ~35 pts (EMNLP 2026)
 - [[goel-2026-privacy-collapse]] — benign fine-tuning (helpful, empathetic, support data) breaks contextual privacy while safety/capability hold; can be backdoored; data filtering helps partly (ACL 2026)
 - [[green-2025-leaky-thoughts]] — reasoning models leak user data in their reasoning traces even when answers are careful; bigger reasoning budgets leak more (EMNLP 2025, seed)
-- [[gupta-2026-pisas]] — PiSAs: teams sharing one agent system spill info between teammates; per-user agents and memory relocate leaks; 79.6–100% of runs fail (arXiv 2026)
 - [[lan-2025-ci-reasoning-rl]] — CI-CoT reasoning prompt plus RL post-training (CI-RL) to teach models contextual integrity (NeurIPS 2025, seed)
-- [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)
-- [[rose-2026-multi-agent-collusion-detection]] — detects secret collusion between agents from their activations (per-agent probes fused into group tests); NARCBench (arXiv 2026, seed)
 - [[nissenbaum-2004-privacy-as-contextual-integrity]] — foundational paper defining contextual integrity (Washington Law Review 2004, seed)
 - [[fischl-lanzoni-2026-breaking-bad]] — "task badness" direction from going-well/badly stories rises before reward hacks; steering against it cuts hacking in Qwen, inconsistent elsewhere (arXiv 2026, seed)
 - [[wang-2026-probing-steering-ci-norms]] — CI norms linearly readable yet models leak ("awareness gap"); summed per-CI-parameter steering cuts leakage to ~0% but utility drops to 1/5 (arXiv 2026)
 - [[westphal-2026-hide-and-seek-embedding]] — fine-tuned LLMs hide prompt secrets in outputs via embedding-hyperplane vocabulary buckets; probes on hidden states detect it (arXiv 2026, seed)
 
 ## Entities
-
 - [[benchmarks-at-a-glance]] — summary table of all benchmarks with a page (setting, unit, size, labels, metrics, scoring, headline); add a row on every benchmark ingest
-- [[pisas]] — CI benchmark for multi-user agentic systems; 265 scenarios, nine task families, appropriateness + visibility labels, three topologies
-- [[cimemories]] — CI benchmark for persistent memory; 10 profiles, ~147 attributes, GPT-5 persona labels; Violation@n and completeness
-- [[agentleak]] — benchmark for internal-channel leakage in multi-agent systems; 1,000 scenarios, vault vs allowed set, seven channels, two-agent coordinator-worker
 - [[agentcibench]] — CI disclosure benchmark for computer-use agents; 117 MCTS-generated scenarios, three failure modes
 
 ## Concepts
-
 - [[contextual-integrity]] — privacy as appropriate information flow; the five flow parameters
 - [[privacy-collapse]] — fine-tuning failure mode: more inappropriate disclosure, unchanged safety/capability; triggers, mechanism, mitigations
-- [[privacy-leakage-in-agents]] — agents leak by their own judgment; settings map (single-user, multi-user, multi-agent); failure modes; internal channels; fine-tuning can worsen it
 - [[prompt-defenses-for-contextual-privacy]] — system-prompt defenses: help agents at no utility cost (AgentCIBench) but trade completeness for privacy in memory (CIMemories); contested
+
+## Synthesis
+- [[reasoning-distillation-privacy-collapse]] — design note: is reasoning distillation benign fine-tuning that collapses privacy? content vs style, s1 natural experiment, four experiments
+- [[does-the-model-know-the-norm]] — critical reading of the privacy awareness gap and CI-parametric steering; what a fair steering comparison needs; contrast with privacy collapse
+
+# Shared by both areas
+
+## Sources
+- [[el-yagoubi-2026-agentleak]] — AgentLeak: two-agent systems leak less in the output (27.2%) but over-share in inter-agent messages (68.8%) and memory, attacker or not; output defenses miss it; minimization, not CI (arXiv 2026)
+- [[gupta-2026-pisas]] — PiSAs: teams sharing one agent system spill info between teammates; per-user agents and memory relocate leaks; 79.6–100% of runs fail (arXiv 2026)
+- [[mireshghallah-2025-cimemories]] — CIMemories: memory-augmented LLMs reveal withheld attributes (Violation@5 15–69%); share-less prompts trade completeness for privacy (arXiv 2025)
+- [[rose-2026-multi-agent-collusion-detection]] — detects secret collusion between agents from their activations (per-agent probes fused into group tests); NARCBench (arXiv 2026, seed)
+
+## Entities
+- [[pisas]] — CI benchmark for multi-user agentic systems; 265 scenarios, nine task families, appropriateness + visibility labels, three topologies
+- [[cimemories]] — CI benchmark for persistent memory; 10 profiles, ~147 attributes, GPT-5 persona labels; Violation@n and completeness
+- [[agentleak]] — benchmark for internal-channel leakage in multi-agent systems; 1,000 scenarios, vault vs allowed set, seven channels, two-agent coordinator-worker
+
+## Concepts
+- [[privacy-leakage-in-agents]] — agents leak by their own judgment; settings map (single-user, multi-user, multi-agent); failure modes; internal channels; fine-tuning can worsen it
 - [[activation-probing-and-steering]] — reading (probes) and writing (steering) internal directions; privacy vectors, collusion and stego probes, task-badness steering; cautions
 - [[privacy-leakage-in-llm-memory]] — models over-share stored memories; violations grow with samples and memory size; fine-tuning worsens it
 
 ## Synthesis
-
-- [[reasoning-distillation-privacy-collapse]] — design note: is reasoning distillation benign fine-tuning that collapses privacy? content vs style, s1 natural experiment, four experiments
-- [[does-the-model-know-the-norm]] — critical reading of the privacy awareness gap and CI-parametric steering; what a fair steering comparison needs; contrast with privacy collapse
 - [[internal-agent-flows-exposure-or-harm]] — is an agent-to-agent flow a privacy violation? AgentLeak vs PiSAs; when internal exposure matters
+
+# Agent communication
+
+No pages of its own yet. Starting point: Hamid's note [[information-flow thesis]] (memory, latent communication, delegation).

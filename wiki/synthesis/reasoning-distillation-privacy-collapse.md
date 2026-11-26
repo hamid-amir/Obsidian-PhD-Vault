@@ -2,6 +2,7 @@
 type: synthesis
 title: "Design note: does reasoning distillation cause privacy collapse?"
 tags: [fine-tuning, contextual-integrity, defenses]
+area: [privacy-safety]
 sources: [goel-2026-privacy-collapse, green-2025-leaky-thoughts, lan-2025-ci-reasoning-rl]
 created: 2026-11-17
 updated: 2026-11-18

@@ -2,13 +2,16 @@
 
 This is Hamidreza (Hamid) Amirzadeh's PhD research vault (INSAIT). It is an Obsidian vault run as an **LLM wiki** following Andrej Karpathy's pattern: Hamid curates sources and asks questions; Claude compiles sources into a persistent, interlinked wiki and keeps it consistent. Knowledge should compound, not be re-derived from raw papers each session.
 
-**Research focus:** contextual privacy in LLMs and LLM agents, studied through contextual integrity (CI): when models and agents disclose information inappropriately, in agent actions, in persistent memory and after fine-tuning, and which defenses work.
+**Research areas** (each wiki page declares its `area`; see `wiki/SCHEMA.md`):
+
+- `privacy-safety`: contextual privacy in LLMs and LLM agents, studied through contextual integrity (CI): when models and agents disclose information inappropriately, in agent actions, in persistent memory and after fine-tuning, and which defenses work.
+- `agent-communication` (new, Nov 2026): information flow across boundaries in agent systems: what crosses in memory (across time), latent communication (across models) and delegation (across roles). Thesis framing in `my-notes/information-flow thesis.md`.
 
 ## Layout
 
 ```
 CLAUDE.md          this file
-Papers.base        Obsidian Bases table over wiki/sources/
+Papers.base        Obsidian Bases table over wiki/sources/ (one view per area + All)
 my-notes/          HAMID'S OWN WRITING. Read for context, link to it, never edit/move/rewrite.
 raw/               immutable non-Zotero sources (clippings, transcripts); raw/assets/ for images
   zotero/          Hamid's Zotero highlights + comments per paper (auto-generated, never edit)
@@ -30,6 +33,7 @@ Paper PDFs live in **Zotero**, not in the vault (`~/Zotero/` on Linux). Source p
 
 Use the **`llm-wiki`** skill for every wiki operation. Read `wiki/SCHEMA.md` before writing; it overrides the skill's defaults.
 
+- **Areas:** give every new page an `area` (one or both). Keep the areas apart in the index and in synthesis pages unless a page is about the link between them.
 - **Query:** read `wiki/index.md` first, open only the relevant pages, answer with `[[wikilink]]` citations. If the wiki lacks coverage, say so; don't answer from training data as if it came from the wiki. Offer to file good answers into `wiki/synthesis/`.
 - **Ingest:** a source page in `wiki/sources/`, surgical updates to the concept/entity pages it touches, new pages linked from existing ones (no orphans), a line in `index.md` and an entry in `log.md`.
 - **Lint:** run the skill's `wiki_lint.py` on `wiki/` and present findings as proposals. Don't apply them silently.

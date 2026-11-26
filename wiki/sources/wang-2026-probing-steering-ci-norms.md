@@ -2,6 +2,7 @@
 type: source
 title: "Do LLMs Know What Is Private Internally? Probing and Steering Contextual Privacy Norms in Large Language Model Representations"
 tags: [contextual-integrity, interpretability, defenses]
+area: [privacy-safety]
 authors:
   - Haoran Wang
   - Li Xiong

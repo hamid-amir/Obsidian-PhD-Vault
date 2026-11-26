@@ -2,6 +2,7 @@
 type: entity
 title: "Benchmarks at a glance"
 tags: [benchmark, contextual-integrity]
+area: [privacy-safety]
 sources: [goel-2026-capable-but-careless, mireshghallah-2025-cimemories, gupta-2026-pisas, el-yagoubi-2026-agentleak]
 created: 2026-11-16
 updated: 2026-11-18

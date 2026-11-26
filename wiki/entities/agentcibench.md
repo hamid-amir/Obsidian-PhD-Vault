@@ -3,6 +3,7 @@ type: entity
 kind: benchmark
 title: "AgentCIBench"
 tags: [benchmark, agents, contextual-integrity]
+area: [privacy-safety]
 sources: [goel-2026-capable-but-careless]
 created: 2026-11-09
 updated: 2026-11-16

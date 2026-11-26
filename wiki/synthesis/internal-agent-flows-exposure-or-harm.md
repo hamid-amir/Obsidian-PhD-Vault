@@ -2,6 +2,7 @@
 type: synthesis
 title: "Internal agent flows: exposure or harm?"
 tags: [agents, contextual-integrity]
+area: [privacy-safety, agent-communication]
 sources: [el-yagoubi-2026-agentleak, gupta-2026-pisas]
 created: 2026-11-16
 updated: 2026-11-17
