@@ -12,3 +12,6 @@ Nov 18, 2026
 - defense idea: John morris papers
 - in a matry setup, 
 ----
+
+Nov 27, 2026
+
