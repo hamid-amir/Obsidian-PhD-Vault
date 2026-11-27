@@ -20,4 +20,4 @@ Nov 27, 2026
 - Human-agents collaboration: 
 	- offloading paper: measure how much of the cognitive thinking, a human has given to the agent.
 	- use interpretability methods to investigate signals in the model that incentivize the offloading, or how to disincentivize it
-	- for example design a RL/training method that decrease this offloading score of the model
+	- for example design a RL pipeline or sft training method that decrease this offloading score of the model (increases human agency)
