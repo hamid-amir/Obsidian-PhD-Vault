@@ -15,6 +15,6 @@ Nov 18, 2026
 
 Nov 27, 2026
 
-- Chain of thought monitorability: train smaller models that look into the reasoning traces of frontier models for intent to misbehave.
+- Chain of thought monitorability: train smaller models/agents that look into the reasoning traces of frontier models to detect intention for misbehave.
 
 - Human-agents collaboration: 
