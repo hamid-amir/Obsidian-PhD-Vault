@@ -15,6 +15,8 @@ Nov 18, 2026
 
 Nov 27, 2026
 
+- [google doc]([google doc](https://docs.google.com/document/d/1ETdji8HxIWtyHUpsEQ3g15Qb2uW-rsEzGT8c4kCXnUk)) for sharing and discussing ideas
+
 - **Chain of thought monitorability:** train smaller models/agents that look into the reasoning traces of frontier models to detect intention for misbehave.
 	- frontier models don't expose weights/logits, so classic interp doesn't apply; small model acts as a "mirror" on the CoT.
 
