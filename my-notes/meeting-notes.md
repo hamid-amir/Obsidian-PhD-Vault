@@ -18,3 +18,6 @@ Nov 27, 2026
 - Chain of thought monitorability: train smaller models/agents that look into the reasoning traces of frontier models to detect intention for misbehave.
 
 - Human-agents collaboration: 
+	- offloading paper: measure how much of the cognitive thinking, a human has given to the agent.
+	- use interpretability methods to investigate signals in the model that incentivize the offloading, or how to disincentivize it
+	- for example design a RL/training method that decrease this offloading score of the model
